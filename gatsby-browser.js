@@ -8,6 +8,7 @@ import {
 
 import 'fontsource-nunito-sans';
 import theme from "./src/theme"
+import { AnimationFeature, MotionConfig } from "framer-motion";
 
 export const wrapRootElement = ({ element }) => {
   const content = (
@@ -18,8 +19,10 @@ export const wrapRootElement = ({ element }) => {
     </>
   )
   return (
-    <ThemeProvider theme={theme}>
+    <MotionConfig features={[AnimationFeature]}>
+      <ThemeProvider theme={theme}>
         {content}
-    </ThemeProvider>
+      </ThemeProvider>
+    </MotionConfig>
   )
 }

@@ -1,10 +1,12 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, theme } from '@chakra-ui/react';
 
-// theme.fonts.
 export default extendTheme({
   fonts: {
     body: '\'Nunito Sans\', san-serif',
     heading: '\'Nunito Sans\', san-serif'
+  },
+  fontSizes: {
+
   },
   colors: {
     react: '#00d8ff',
@@ -23,7 +25,14 @@ export default extendTheme({
         fontSize: 'calc(1em + (1.5 - 1) * (100vw - 25em) / (50 - 25))'
       }, */
       body: {
-        color: 'white'
+        color: 'white',
+        bgColor: 'darkblack'
+      },
+      h2: {
+        fontSize: 'xl'
+      },
+      p: {
+        fontSize: 'md'
       }
     }
   }
