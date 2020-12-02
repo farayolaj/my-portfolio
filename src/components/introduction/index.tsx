@@ -3,7 +3,7 @@ import React from 'react';
 
 function Introduction(): JSX.Element {
   return (
-    <VStack as="section" px={8} spacing={4} align="initial">
+    <VStack as="section" w="full" spacing={4} align="initial">
       <h2>Introduction</h2>
       <Text>
         I am a fullstack web developer that loves
