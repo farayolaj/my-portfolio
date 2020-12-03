@@ -78,7 +78,14 @@ function LandingPage(): JSX.Element {
         </Box>
         <VStack pos="relative">
           <Text fontSize="20px" alignSelf="flex-start">I am</Text>
-          <Text fontSize="72px" lineHeight="1.2" textAlign="center">Farayola Joshua</Text>
+          <Text 
+            fontSize="72px"
+            lineHeight="1.2" 
+            textAlign="center" 
+            fontWeight="bold"
+          >
+            Farayola Joshua
+          </Text>
           <Tag fontSize="16px" bgColor="darkblack" color="white">a fullstack developer</Tag>
         </VStack>
       </Box>

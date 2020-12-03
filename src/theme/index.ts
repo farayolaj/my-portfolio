@@ -2,8 +2,8 @@ import { extendTheme, theme } from '@chakra-ui/react';
 
 export default extendTheme({
   fonts: {
-    body: '\'Nunito Sans\', san-serif',
-    heading: '\'Nunito Sans\', san-serif'
+    body: '\'Futura PT Book\', san-serif',
+    heading: '\'Futura PT Book\', san-serif'
   },
   fontSizes: {
 
@@ -28,11 +28,15 @@ export default extendTheme({
         color: 'white',
         bgColor: 'darkblack'
       },
+      'h1, h2, h3, h4, h5, h6': {
+        fontWeight: 'bold'
+      },
       h2: {
         fontSize: 'xl'
       },
-      p: {
-        fontSize: 'md'
+      'p, span': {
+        fontSize: 'md',
+        letterSpacing: '0.02rem'
       }
     }
   }
