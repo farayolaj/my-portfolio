@@ -2,8 +2,8 @@ import { extendTheme, theme } from '@chakra-ui/react';
 
 export default extendTheme({
   fonts: {
-    body: '\'Futura PT Book\', san-serif',
-    heading: '\'Futura PT Book\', san-serif'
+    body: '\'Futura PT\', san-serif',
+    heading: '\'Futura PT\', san-serif'
   },
   fontSizes: {
 

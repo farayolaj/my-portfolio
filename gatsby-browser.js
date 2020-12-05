@@ -5,10 +5,9 @@ import {
   GlobalStyle,
   PortalManager,
 } from "@chakra-ui/react"
-
-import 'fontsource-nunito-sans';
 import theme from "./src/theme"
 import { AnimationFeature, MotionConfig } from "framer-motion";
+import './src/style/index.css';
 
 export const wrapRootElement = ({ element }) => {
   const content = (
