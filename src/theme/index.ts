@@ -5,8 +5,16 @@ export default extendTheme({
     body: '\'Futura PT\', san-serif',
     heading: '\'Futura PT\', san-serif'
   },
-  fontSizes: {
-
+  components: {
+    Link: {
+      baseStyle: {
+        opacity: 0.7,
+        _hover: {
+          opacity: 1,
+          textDecoration: "none"
+        }
+      }
+    }
   },
   colors: {
     react: '#00d8ff',
@@ -37,6 +45,13 @@ export default extendTheme({
       'p, span': {
         fontSize: 'md',
         letterSpacing: '0.02rem'
+      },
+      'html, body': {
+        scrollSnapType: 'y mandatory',
+        scrollPadding: 10
+      },
+      '.screen > *': {
+        scrollSnapAlign: 'start'
       }
     }
   }
