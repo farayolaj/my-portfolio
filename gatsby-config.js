@@ -7,7 +7,14 @@
 module.exports = {
   /* Your site config here */
   plugins: [
-    "gatsby-plugin-svgr",
+    'gatsby-plugin-svgr',
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: './src/data/'
+      }
+    },
     // 'gatsby-plugin-react-helmet',
     // 'gatsby-plugin-offline'
   ],

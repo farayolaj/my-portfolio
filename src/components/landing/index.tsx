@@ -1,16 +1,51 @@
-import { Box, Flex, Icon, IconButton, Tag, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Icon, IconButton, Link, Tag, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import AnimatedBox from '../lib/AnimatedBox';
+import { useStaticQuery, graphql } from 'gatsby';
+
+const landingQuery = graphql`
+query {
+  dataJson {
+    name
+    tagLine
+    contact {
+      github
+      linkedin
+      twitter
+    }
+  }
+}
+`;
+
+type TLandingData = {
+  name: string,
+  tagLine: string,
+  contact: {
+    github: string,
+    linkedin: string,
+    twitter: string
+  }
+};
 
 function LandingPage(): JSX.Element {
+  const {
+    name,
+    tagLine,
+    contact: {
+      github,
+      linkedin,
+      twitter
+    }
+  } = useStaticQuery(landingQuery).dataJson as TLandingData;
+
   return (
     <Flex bgColor="lightblack" direction="column" align="center" justify="space-around" px={8} py={4} w="full" h="100vh">
       <Text fontSize="24px">Hello, nice to have you here...</Text>
       <Box pos="relative">
         <Box pos="absolute" w="full" h={24}>
           <AnimatedBox pos="relative" left="50%" w="fit-content" animate={{
-            scale: 1.15
+            scale: 1.2
           }} transition={{
             from: 1,
             delay: 0,
@@ -26,7 +61,7 @@ function LandingPage(): JSX.Element {
             </svg>
           </AnimatedBox>
           <AnimatedBox pos="relative" left="10%" top="30%" w="fit-content" animate={{
-            scale: 1.2
+            scale: 1.25
           }} transition={{
             from: 1,
             delay: 1.5,
@@ -58,7 +93,7 @@ function LandingPage(): JSX.Element {
             base: '50%',
             md: '15%'
           }} w="fit-content" animate={{
-            scale: 1.15
+            scale: 1.2
           }} transition={{
             from: 1,
             delay: 3,
@@ -78,15 +113,15 @@ function LandingPage(): JSX.Element {
         </Box>
         <VStack pos="relative">
           <Text fontSize="20px" alignSelf="flex-start">I am</Text>
-          <Text 
+          <Text
             fontSize="72px"
-            lineHeight="1.2" 
-            textAlign="center" 
+            lineHeight="1.2"
+            textAlign="center"
             fontWeight="bold"
           >
-            Farayola Joshua
+            {name}
           </Text>
-          <Tag fontSize="16px" bgColor="darkblack" color="white">a fullstack developer</Tag>
+          <Tag fontSize="16px" bgColor="darkblack" color="white">{tagLine}</Tag>
         </VStack>
       </Box>
       <VStack w="full" spacing={10}>
@@ -94,21 +129,30 @@ function LandingPage(): JSX.Element {
           base: 'full',
           md: '50%'
         }}>
-          <IconButton
-            variant="unstyled"
-            fontSize="2rem"
-            icon={<Icon as={FaGithub} />}
-            aria-label="github profile" />
-          <IconButton
-            variant="unstyled"
-            fontSize="2rem"
-            icon={<Icon as={FaLinkedin} />}
-            aria-label="linkedin profile" />
-          <IconButton
-            variant="unstyled"
-            fontSize="2rem"
-            icon={<Icon as={FaTwitter} />}
-            aria-label="twitter profile" />
+          <Link href={github} isExternal>
+            <IconButton
+              d="inline-flex"
+              variant="unstyled"
+              fontSize="2rem"
+              icon={<Icon as={FaGithub} />}
+              aria-label="github profile" />
+          </Link>
+          <Link href={linkedin} isExternal>
+            <IconButton
+              d="inline-flex"
+              variant="unstyled"
+              fontSize="2rem"
+              icon={<Icon as={FaLinkedin} />}
+              aria-label="linkedin profile" />
+          </Link>
+          <Link href={twitter} isExternal>
+            <IconButton
+              d="inline-flex"
+              variant="unstyled"
+              fontSize="2rem"
+              icon={<Icon as={FaTwitter} />}
+              aria-label="twitter profile" />
+          </Link>
         </Flex>
         <IconButton
           variant="unstyled"

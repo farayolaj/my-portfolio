@@ -1,0 +1,35 @@
+{
+  "name": "Farayola Joshua",
+  "tagLine": "a fullstack web developer",
+  "introduction": "I am a fullstack web developer that loves building scalable systems and products that offer value.",
+  "works": [
+    {
+      "title": "Just Another Work 1",
+      "summary": "This is just another work 1",
+      "skillsUsed": ["React", "MongoDB", "Typescript"],
+      "link": {
+        "code": "#",
+        "live": "#"
+      }
+    },
+    {
+      "title": "Just Another Work 2",
+      "summary": "This is just another work 2",
+      "skillsUsed": ["Node", "Firebase", "Typescript"],
+      "link": {
+        "code": "#",
+        "live": null
+      }
+    }
+  ],
+  "resume": {
+    "download": "#",
+    "view": "#"
+  },
+  "contact": {
+    "twitter": "#",
+    "linkedin": "#",
+    "github": "https://github.com/farayolaj",
+    "email": "farayolajoshua@gmail.com"
+  }
+}
