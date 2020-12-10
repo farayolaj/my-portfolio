@@ -17,12 +17,12 @@ export default extendTheme({
     }
   },
   colors: {
-    react: '#00d8ff',
-    graphql: '#e10098',
-    node: '#83cd29',
-    typescript: '#3178c6',
-    mongodb: '#58aa50',
-    firebase: '#fcca3f',
+    react: '#00d8ff4d',
+    graphql: '#e100984d',
+    node: '#83cd294d',
+    typescript: '#3178c64d',
+    mongodb: '#58aa504d',
+    firebase: '#fcca3f4d',
     lightblack: '#2d2e32',
     darkblack: '#25262a'
   },
@@ -45,13 +45,6 @@ export default extendTheme({
       'p, span': {
         fontSize: 'md',
         letterSpacing: '0.02rem'
-      },
-      'html, body': {
-        scrollSnapType: 'y mandatory',
-        scrollPadding: 10
-      },
-      '.screen > *': {
-        scrollSnapAlign: 'start'
       }
     }
   }
