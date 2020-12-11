@@ -1,7 +1,9 @@
-import React from 'react';
-import { FaHamburger } from 'react-icons/fa';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { HStack, IconButton, Link, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Flex, Link, Text, useBreakpointValue } from '@chakra-ui/react';
+
+import MenuButton from './MenuButton';
+import NavMenu from './NavMenu';
 
 const query = graphql`
 query {
@@ -13,24 +15,29 @@ query {
 
 function Header(): JSX.Element {
   const name = useStaticQuery(query).dataJson.name as string;
-  const showSideBar = useBreakpointValue({
+  const isMobile = useBreakpointValue({
     base: true,
     md: false
   });
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
 
   return (
-    <HStack w="full" bgColor="lightblack" pos="fixed"
-      top={0} px={[8, 32]} justify="space-between" fontSize="1.65rem">
+    <Flex w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
+      top={0} px={[8, null, 32]} justify="space-between" fontSize="1.65rem">
       <Link opacity={1}>
         <Text
+          fontSize="1em"
           lineHeight="1.2"
           textAlign="center"
           fontWeight="bold">
           {name}
         </Text>
       </Link>
-      <IconButton icon={<FaHamburger />} variant="unstyled" aria-label="Open navigation bar" />
-    </HStack>
+      {isMobile && 
+        <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
+      {isMobile ? (isMenuOpen ? <NavMenu /> : null) : <NavMenu />}
+    </Flex>
   );
 }
 

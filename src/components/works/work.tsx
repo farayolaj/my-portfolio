@@ -1,4 +1,4 @@
-import { HStack, Link, Tag, TagLabel, TagRightIcon, Text, VStack } from '@chakra-ui/react';
+import { Flex, HStack, Link, Tag, TagLabel, TagRightIcon, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -18,14 +18,14 @@ function Work({ title, summary, skillsUsed, link }: TWork): JSX.Element {
       spacing="0.375rem" align="initial" w={['initial', null, '50vw', 'initial']}>
       <Text as="span" fontSize="1.125rem">{title}</Text>
       <Text>{summary}</Text>
-      <HStack>
+      <Flex flexWrap="wrap" style={{gap: '0.25rem'}}>
         {skillsUsed.map(skill => (
           <Tag color="white" bgColor={skill.toLowerCase()} minH={0}
             borderRadius="full" pb="0.15rem" key={skill}>
             {skill}
           </Tag>
         ))}
-      </HStack>
+      </Flex>
       <WorkLinks codeUrl={link.code} liveUrl={link.live} />
     </VStack>
   );

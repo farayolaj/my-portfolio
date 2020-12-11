@@ -44,7 +44,7 @@ export default extendTheme({
       },
       'p, span': {
         fontSize: 'md',
-        letterSpacing: '0.02rem'
+        letterSpacing: '0.02em'
       }
     }
   }
