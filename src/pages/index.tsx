@@ -10,18 +10,15 @@ import Works from "../components/works";
 
 export default function Home(): JSX.Element {
   return (
-    <>
-      <Header />
-      <Box pb={8} >
-        <LandingPage />
-        <VStack spacing={10} mt={10} px={[8, null, 32]}>
-          <Introduction />
-          <Skills />
-          <Works />
-          <Resume />
-          <Contact />
-        </VStack>
-      </Box>
-    </>
+    <Box pb={8} >
+      <LandingPage />
+      <VStack spacing={10} mt='4.5rem' px={[8, null, 32]}>
+        <Introduction />
+        <Skills />
+        <Works />
+        <Resume />
+        <Contact />
+      </VStack>
+    </Box>
   );
 }

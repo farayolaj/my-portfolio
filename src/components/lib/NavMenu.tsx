@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Link, useBreakpointValue } from '@chakra-ui/react';
+import { Flex, Link } from '@chakra-ui/react';
 
 function NavMenu(): JSX.Element {
   return (

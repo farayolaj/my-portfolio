@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Flex, Link, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
 
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
+import AnimatedBox from './AnimatedBox';
+import { Variants } from 'framer-motion';
 
 const query = graphql`
 query {
@@ -13,18 +15,32 @@ query {
 }
 `;
 
-function Header(): JSX.Element {
+const variants: Variants = {
+  show: {
+    display: 'flex',
+    top: 0
+  },
+  hide: {
+    top: '-4rem',
+    display: 'none'
+  }
+}
+
+function Header({ show }: { show: boolean}): JSX.Element {
   const name = useStaticQuery(query).dataJson.name as string;
   const isMobile = useBreakpointValue({
     base: true,
     md: false
   });
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const animateVariant = show ? 'show' : 'hide';
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   return (
-    <Flex w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
-      top={0} px={[8, null, 32]} justify="space-between" fontSize="1.65rem">
+    <AnimatedBox w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
+      top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem"
+      animate={animateVariant} variants={variants} initial={animateVariant}>
       <Link opacity={1}>
         <Text
           fontSize="1em"
@@ -37,7 +53,7 @@ function Header(): JSX.Element {
       {isMobile && 
         <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
       {isMobile ? (isMenuOpen ? <NavMenu /> : null) : <NavMenu />}
-    </Flex>
+    </AnimatedBox>
   );
 }
 
