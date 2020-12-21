@@ -6,7 +6,7 @@ import {
   PortalManager,
 } from "@chakra-ui/react"
 import theme from "./src/theme"
-import { AnimationFeature, MotionConfig } from "framer-motion";
+import { AnimationFeature, ExitFeature, MotionConfig } from "framer-motion";
 import './src/style/index.css';
 
 export const wrapRootElement = ({ element }) => {
@@ -18,7 +18,7 @@ export const wrapRootElement = ({ element }) => {
     </>
   )
   return (
-    <MotionConfig features={[AnimationFeature]}>
+    <MotionConfig features={[AnimationFeature, ExitFeature]}>
       <ThemeProvider theme={theme}>
         {content}
       </ThemeProvider>
