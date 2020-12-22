@@ -28,10 +28,9 @@ export default extendTheme({
   },
   styles: {
     global: {
-      /* responsive typography
-        html: {
-        fontSize: 'calc(1em + (1.5 - 1) * (100vw - 25em) / (50 - 25))'
-      }, */
+      html: {
+        fontSize: 'clamp(1rem, 18px, 3vw)'
+      },
       body: {
         color: 'white',
         bgColor: 'darkblack'
