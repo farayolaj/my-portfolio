@@ -4,22 +4,38 @@
   "introduction": "I am a fullstack web developer that loves building scalable systems and products that offer value.",
   "works": [
     {
-      "title": "Just Another Work 1",
-      "summary": "This is just another work 1",
-      "skillsUsed": ["React", "MongoDB", "Typescript"],
+      "title": "Play Tic Tac Toe",
+      "summary": "A tic tac toe game featuring an AI opponent",
+      "story": [
+        "This was one of my earliest works. I actually wanted to build a chess engine, but I started with this to understand what it takes to do so. The AI engine uses the MiniMax algorithm to make an optimal choice. It took a while for me to implement the algorithm, but I later understood its concept.",
+        "Another challenge was figuring out a representation for the board state. I settled on using binary digits since bit manipulations made it easy to make changes and improved the performance. To not block the main program, the AI runs on a worker thread. This was my first use of worker threads.",
+        "This work is hosted on Heroku, it is also available as a PWA."
+      ],
+      "skillsUsed": [
+        "React"
+      ],
       "link": {
-        "code": "#",
-        "live": "#"
-      }
+        "code": "https://github.com/farayolaj/tic-tac-toe",
+        "live": "https://tic-tac-toe-20.herokuapp.com"
+      },
+      "imgUrl": "/images/tic-tac-toe.png"
     },
     {
       "title": "Just Another Work 2",
       "summary": "This is just another work 2",
-      "skillsUsed": ["Node", "Firebase", "Typescript"],
+      "story": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Beatus sibi videtur esse moriens. Bonum integritas corporis: misera debilitas. Praeclarae mortes sunt imperatoriae; Ut alios omittam, hunc appello, quem ille unum secutus est. Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Duo Reges: constructio interrete. Ille enim occurrentia nescio quae comminiscebatur; Ille enim occurrentia nescio quae comminiscebatur; Quae animi affectio suum cuique tribuens atque hanc, quam dico. Sed nimis multa. Hunc ipsum Zenonis aiunt esse finem declarantem illud, quod a te dictum est, convenienter naturae vivere. Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; Quod ea non occurrentia fingunt, vincunt Aristonem; Apparet statim, quae sint officia, quae actiones. Sed quia studebat laudi et dignitati, multum in virtute processerat. Sed residamus, inquit, si placet. In motu et in statu corporis nihil inest, quod animadvertendum esse ipsa natura iudicet? Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Ne in odium veniam, si amicum destitero tueri. Parvi enim primo ortu sic iacent, tamquam omnino sine animo sint. Ad eas enim res ab Epicuro praecepta dantur. Istam voluptatem perpetuam quis potest praestare sapienti? Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Huius, Lyco, oratione locuples, rebus ipsis ielunior. Quia dolori non voluptas contraria est, sed doloris privatio. An eiusdem modi? Sapiens autem semper beatus est et est aliquando in dolore;"
+      ],
+      "skillsUsed": [
+        "Node",
+        "Firebase",
+        "Typescript"
+      ],
       "link": {
         "code": "#",
         "live": null
-      }
+      },
+      "imgUrl": "/images/pj.png"
     }
   ],
   "resume": {

@@ -9,11 +9,13 @@ const workQuery = graphql`
           works {
             title
             summary
+            story
             skillsUsed
             link {
               code
               live
             }
+            imgUrl
           }
         }
       }
@@ -25,8 +27,7 @@ function Works(): JSX.Element {
   return (
     <VStack as="section" w="full" spacing={4} align="initial">
       <h2>Works</h2>
-      <SimpleGrid columns={[1, null, null, 2, 3]}
-        justifyItems={['initial', null, 'center', 'initial']} w="full" gap={6}>
+      <SimpleGrid w="full" gap={6} columns={1} >
         {data.map(work => (
           <Work {...work} key={work.title} />
         ))}

@@ -1,40 +1,53 @@
-import { Flex, HStack, Link, Tag, TagLabel, TagRightIcon, Text, VStack } from '@chakra-ui/react';
+import {
+  Flex, HStack, Image, Link, Tag,
+  TagLabel, TagRightIcon, Text, VStack
+} from '@chakra-ui/react';
 import React from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 export type TWork = {
   title: string,
   summary: string,
+  story: string[],
   skillsUsed: string[],
   link: {
     code: string,
     live: string
-  }
+  },
+  imgUrl: string
 }
 
-function Work({ title, summary, skillsUsed, link }: TWork): JSX.Element {
+function Work(props: TWork): JSX.Element {
+  const { title, summary, story, skillsUsed, link, imgUrl } = props;
+
   return (
-    <VStack rounded={1} bgColor="lightblack" p={3}
-      spacing="0.375rem" align="initial" w={['initial', null, '50vw', 'initial']}>
-      <Text as="span" fontSize="1.125rem">{title}</Text>
-      <Text>{summary}</Text>
-      <Flex flexWrap="wrap" style={{gap: '0.25rem'}}>
-        {skillsUsed.map(skill => (
-          <Tag color="white" bgColor={skill.toLowerCase()} minH={0}
-            borderRadius="full" pb="0.15rem" key={skill}>
-            {skill}
-          </Tag>
-        ))}
-      </Flex>
-      <WorkLinks codeUrl={link.code} liveUrl={link.live} />
-    </VStack>
+    <Flex rounded={1} bgColor="lightblack" align="center"
+      direction="column" mt={[null, null, '12vw']}>
+      <Image src={imgUrl} alt={title} width={['100%', null, '50%']}
+        fit="cover" mt={[null, null, '-12vw']} />
+      <VStack p={3} spacing="0.375rem" align="initial">
+        <Text as="span" fontSize="1.125rem">{title}</Text>
+        <Text fontStyle="italic" >{summary}</Text>
+        <Flex flexWrap="wrap" style={{ gap: '0.25rem' }}>
+          {skillsUsed.map(skill => (
+            <Tag color="white" bgColor={skill.toLowerCase()} minH={0}
+              borderRadius="full" pb="0.15rem" key={skill}>
+              {skill}
+            </Tag>
+          ))}
+        </Flex>
+        {story.map(text => (<Text key={text}>{text}</Text>))}
+        <WorkLinks codeUrl={link.code} liveUrl={link.live} />
+      </VStack>
+    </Flex>
   );
 }
 
 function WorkLinks({ liveUrl, codeUrl }: { liveUrl?: string, codeUrl?: string }): JSX.Element {
   if (!liveUrl && !codeUrl) return null;
   return (
-    <HStack justify={liveUrl ? 'space-between' : 'initial'} lineHeight="1">
+    <HStack justify={[liveUrl ? 'space-between' : 'initial', null, 'space-around']}
+      pt={4} lineHeight="1">
       <Link href={codeUrl}>
         <Tag variant="unstyled" color="white"
           px={0} minH="initial" minW="initial">
