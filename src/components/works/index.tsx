@@ -25,14 +25,17 @@ function Works(): JSX.Element {
   const data = useStaticQuery(workQuery).dataJson.works as TWork[];
 
   return (
-    <VStack as="section" w="full" spacing={4} align="initial">
-      <h2>Works</h2>
-      <SimpleGrid w="full" gap={6} columns={1} >
-        {data.map(work => (
-          <Work {...work} key={work.title} />
-        ))}
-      </SimpleGrid>
-    </VStack>
+    <>
+      <span id="works" style={{ paddingTop: '4.5rem' }}></span>
+      <VStack as="section" w="full" spacing={4} align="initial">
+        <h2>Works</h2>
+        <SimpleGrid w="full" gap={6} columns={1} >
+          {data.map(work => (
+            <Work {...work} key={work.title} />
+          ))}
+        </SimpleGrid>
+      </VStack>
+    </>
   );
 }
 
