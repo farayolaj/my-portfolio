@@ -5,7 +5,7 @@ import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
 import AnimatedBox from './AnimatedBox';
-import { AnimatePresence, Variants } from 'framer-motion';
+import { Variants } from 'framer-motion';
 
 const query = graphql`
 query {
@@ -16,11 +16,25 @@ query {
 `;
 
 const variants: Variants = {
+  initial: {
+    top: '-4rem',
+    display: 'none'
+  },
   show: {
-    top: 0
+    top: 0,
+    display: 'flex',
+    transition: {
+      when: 'beforeChildren'
+    }
   },
   hide: {
     top: '-4rem',
+    transition: {
+      when: 'afterChildren'
+    },
+    transitionEnd: {
+      display: 'none'
+    }
   }
 }
 
@@ -33,13 +47,14 @@ function Header({ show }: { show: boolean }): JSX.Element {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
+  const closeMenu = () => setMenuOpen(false);
+  const animate = show ? 'show' : 'hide';
 
   return (
-    <AnimatePresence initial={false}>
-      {show && <AnimatedBox w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
+      <AnimatedBox w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
         top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem" d="flex"
-        animate="show" variants={variants} initial="hide" exit="hide" key="header">
-        <Link opacity={1}>
+        animate={animate} variants={variants} initial="initial">
+        <Link opacity={1} href="#">
           <Text
             fontSize="1em"
             lineHeight="1.2"
@@ -50,9 +65,8 @@ function Header({ show }: { show: boolean }): JSX.Element {
         </Link>
         {isMobile &&
           <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
-        {isMobile ? (isMenuOpen ? <NavMenu /> : null) : <NavMenu />}
-      </AnimatedBox>}
-    </AnimatePresence>
+        {isMobile ? (isMenuOpen ? <NavMenu closeMenu={closeMenu} /> : null) : <NavMenu closeMenu={closeMenu} />}
+      </AnimatedBox>
   );
 }
 
