@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
 
@@ -45,6 +45,10 @@ function Header({ show }: { show: boolean }): JSX.Element {
     md: false
   });
   const [isMenuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    if (!isMobile) setMenuOpen(true);
+    else setMenuOpen(false);
+  }, [isMobile]);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
   const closeMenu = () => setMenuOpen(false);
@@ -65,7 +69,7 @@ function Header({ show }: { show: boolean }): JSX.Element {
         </Link>
         {isMobile &&
           <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
-        {isMobile ? (isMenuOpen ? <NavMenu closeMenu={closeMenu} /> : null) : <NavMenu closeMenu={closeMenu} />}
+        <NavMenu isMenuOpen={isMobile ? isMenuOpen : show} closeMenu={closeMenu} />
       </AnimatedBox>
   );
 }

@@ -5,9 +5,21 @@ import React from 'react';
 import { Variants } from 'framer-motion';
 
 const menuVariants: Variants = {
+  initial: {
+    opacity: 0,
+    display: 'none'
+  },
   animate: {
+    opacity: 1,
+    display: 'flex',
     transition: {
       staggerChildren: 0.3
+    }
+  },
+  exit: {
+    opacity: 0,
+    transitionEnd: {
+      display: 'none'
     }
   }
 };
@@ -15,23 +27,32 @@ const menuVariants: Variants = {
 const linkVariants: Variants = {
   initial: {
     y: '2rem',
-    opacity: 0
+    color: 'rgba(255, 255, 255, 0)'
   },
   animate: {
     y: '0rem',
-    opacity: 0.7
+    color: 'rgba(255, 255, 255, 1)'
+  },
+  exit: {
+    color: 'rgba(255, 255, 255, 0)',
+    transitionEnd: {
+      y: '2rem'
+    }
   }
 }
 
 type NavMenuProps = {
-  closeMenu: () => void
+  isMenuOpen: boolean;
+  closeMenu: () => void;
 };
 
-function NavMenu({ closeMenu }: NavMenuProps): JSX.Element {
+function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
+  const animate = isMenuOpen ? 'animate' : 'exit';
+
   return (
     <AnimatedBox alignItems="center" justifyContent="space-between" w={['full', null, '50%']}
       flexDirection={['column', null, 'row']} fontSize={[null, null, '1.25rem']} d="flex"
-      mt={[8, null, 0]} mb={[4, null, 0]} animate="animate" initial="initial" variants={menuVariants} >
+      mt={[8, null, 0]} mb={[4, null, 0]} animate={animate} initial="initial" variants={menuVariants} >
       <AnimatedLink href="#skills" onClick={closeMenu} variants={linkVariants} >Skills</AnimatedLink>
       <AnimatedLink href="#works" onClick={closeMenu} variants={linkVariants} >Works</AnimatedLink>
       <AnimatedLink href="#resume" onClick={closeMenu} variants={linkVariants} >Resume</AnimatedLink>
