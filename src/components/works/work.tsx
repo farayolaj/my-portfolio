@@ -31,8 +31,8 @@ function Work(props: TWork): JSX.Element {
         <Flex flexWrap="wrap" style={{ gap: '0.25rem' }}>
           {skillsUsed.map(skill => (
             <Tag color="white" bgColor={skill.toLowerCase()} minH={0}
-              borderRadius="full" pb="0.15rem" key={skill}>
-              {skill}
+              borderRadius="full" key={skill}>
+              {skill.toLowerCase()}
             </Tag>
           ))}
         </Flex>
@@ -48,14 +48,14 @@ function WorkLinks({ liveUrl, codeUrl }: { liveUrl?: string, codeUrl?: string })
   return (
     <HStack justify={[liveUrl ? 'space-between' : 'initial', null, 'space-around']}
       pt={4} lineHeight="1">
-      <Link href={codeUrl}>
+      <Link href={codeUrl} isExternal>
         <Tag variant="unstyled" color="white"
           px={0} minH="initial" minW="initial">
           <TagLabel fontSize="inherit">Code</TagLabel>
           <TagRightIcon as={FaCode} fontSize="inherit" />
         </Tag>
       </Link>
-      {liveUrl && <Link href={liveUrl}>
+      {liveUrl && <Link href={liveUrl} isExternal>
         <Tag variant="unstyled" color="white"
           px={0} minH="initial" minW="initial">
           <TagLabel fontSize="inherit">Live</TagLabel>
