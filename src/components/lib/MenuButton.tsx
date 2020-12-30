@@ -1,5 +1,6 @@
 import React, { MouseEventHandler } from 'react';
-import { m as motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Button } from '@chakra-ui/react';
 
 const line1Variant = {
   close: {
@@ -51,7 +52,7 @@ type MenuButtonProps = {
   color?: string,
   size?: number | string,
   ariaLabel: string,
-  onClick: MouseEventHandler<SVGSVGElement>
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
 
 function MenuButton({
@@ -67,14 +68,17 @@ function MenuButton({
     strokeWidth: 3
   };
 
+  
   return (
-    <motion.svg width={size} height={size} viewBox="0 0 23 23" onClick={onClick}
-      fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
-      animate={animate} style={style} role="button" aria-label={ariaLabel}>
-      <motion.line {...line1Variant.open} variants={line1Variant} />
-      <motion.line {...line2Variant.open} variants={line2Variant} />
-      <motion.line {...line3Variant.open} variants={line3Variant} />
-    </motion.svg>
+    <Button onClick={onClick} variant="unstyled" fontSize={size} d="inline-flex">
+      <motion.svg width={size} height={size} viewBox="0 0 23 23"
+        fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+        animate={animate} style={style} aria-label={ariaLabel}>
+        <motion.line {...line1Variant.open} variants={line1Variant} />
+        <motion.line {...line2Variant.open} variants={line2Variant} />
+        <motion.line {...line3Variant.open} variants={line3Variant} />
+      </motion.svg>
+    </Button>
   );
 }
 

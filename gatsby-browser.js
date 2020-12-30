@@ -1,12 +1,12 @@
-import React from "react"
+import React from 'react';
 import {
   ThemeProvider,
   CSSReset,
   GlobalStyle,
   PortalManager,
-} from "@chakra-ui/react"
-import theme from "./src/theme"
-import { AnimationFeature, ExitFeature, MotionConfig } from "framer-motion";
+} from '@chakra-ui/react';
+import theme from './src/theme';
+// import { AnimationFeature, ExitFeature, MotionConfig } from 'framer-motion';
 import './src/style/index.css';
 
 export const wrapRootElement = ({ element }) => {
@@ -16,12 +16,11 @@ export const wrapRootElement = ({ element }) => {
       <GlobalStyle />
       <PortalManager>{element}</PortalManager>
     </>
-  )
+  );
+  // <MotionConfig features={[AnimationFeature, ExitFeature]}> </MotionConfig>
   return (
-    <MotionConfig features={[AnimationFeature, ExitFeature]}>
-      <ThemeProvider theme={theme}>
-        {content}
-      </ThemeProvider>
-    </MotionConfig>
-  )
+    <ThemeProvider theme={theme}>
+      {content}
+    </ThemeProvider>
+  );
 }
