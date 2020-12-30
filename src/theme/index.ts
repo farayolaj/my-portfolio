@@ -1,4 +1,4 @@
-import { extendTheme, theme } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
   fonts: {
@@ -34,6 +34,9 @@ export default extendTheme({
       body: {
         color: 'white',
         bgColor: 'darkblack'
+      },
+      '*': {
+        scrollBehavior: 'smooth'
       },
       'h1, h2, h3, h4, h5, h6': {
         fontWeight: 'bold'
