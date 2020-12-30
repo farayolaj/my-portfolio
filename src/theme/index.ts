@@ -47,6 +47,10 @@ export default extendTheme({
       'p, span': {
         fontSize: 'md',
         letterSpacing: '0.02em'
+      },
+      '::selection': {
+        background: 'whiteAlpha.500',
+        color: 'black'
       }
     }
   }
