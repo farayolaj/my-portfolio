@@ -31,33 +31,30 @@ function Contact(): JSX.Element {
     twitter
   } = useStaticQuery(introQuery).dataJson.contact as TContact;
   return (
-    <>
-      <span id="contact" style={{ paddingTop: '4.5rem' }}></span>
-      <VStack as="section" w="full" spacing={4} align="initial">
-        <h2>Contact</h2>
-        <Box d="flex" flexDirection="column">
-          <Link href={`mailto:${email}`} w="fit-content">{email}</Link>
-          <Link d="inline-block" w="fit-content" href={github} isExternal>
-            <HStack align="center">
-              <span>Github</span>
-              <Icon as={FaGithub} ml={2} />
-            </HStack>
-          </Link>
-          <Link d="inline-block" w="fit-content" href={linkedin} isExternal>
-            <HStack align="center">
-              <span>LinkedIn</span>
-              <Icon as={FaLinkedin} ml={2} />
-            </HStack>
-          </Link>
-          <Link d="inline-block" w="fit-content" href={twitter} isExternal>
-            <HStack align="center">
-              <span>Twitter</span>
-              <Icon as={FaTwitter} ml={2} />
-            </HStack>
-          </Link>
-        </Box>
-      </VStack>
-    </>
+    <VStack as="section" w="full" spacing={4} align="initial" id="contact">
+      <h2>Contact</h2>
+      <Box d="flex" flexDirection="column">
+        <Link href={`mailto:${email}`} w="fit-content">{email}</Link>
+        <Link d="inline-block" w="fit-content" href={github} isExternal>
+          <HStack align="center">
+            <span>Github</span>
+            <Icon as={FaGithub} ml={2} />
+          </HStack>
+        </Link>
+        <Link d="inline-block" w="fit-content" href={linkedin} isExternal>
+          <HStack align="center">
+            <span>LinkedIn</span>
+            <Icon as={FaLinkedin} ml={2} />
+          </HStack>
+        </Link>
+        <Link d="inline-block" w="fit-content" href={twitter} isExternal>
+          <HStack align="center">
+            <span>Twitter</span>
+            <Icon as={FaTwitter} ml={2} />
+          </HStack>
+        </Link>
+      </Box>
+    </VStack>
   );
 }
 

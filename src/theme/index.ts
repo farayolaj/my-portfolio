@@ -51,6 +51,9 @@ export default extendTheme({
       '::selection': {
         background: 'whiteAlpha.500',
         color: 'black'
+      },
+      section: {
+        scrollMarginTop: '4.5rem'
       }
     }
   }

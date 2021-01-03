@@ -155,14 +155,14 @@ function LandingPage(): JSX.Element {
                 aria-label="twitter profile" />
             </Link>
           </Flex>
-          <Link href="#introduction">
+          <a href="#introduction">
             <IconButton
               d="inline-flex"
               variant="unstyled"
               fontSize="2rem"
               icon={<Icon as={FaArrowDown} />}
               aria-label="next section" />
-          </Link>
+          </a>
         </VStack>
       </Flex>
       <Header show={shouldShowHeader} />

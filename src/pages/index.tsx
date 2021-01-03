@@ -11,7 +11,7 @@ export default function Home(): JSX.Element {
   return (
     <Box pb={8} >
       <LandingPage />
-      <VStack px={[8, null, 32]}>
+      <VStack px={[8, null, 32]} mt="4.5rem" spacing={10}>
         <Introduction />
         <Skills />
         <Works />

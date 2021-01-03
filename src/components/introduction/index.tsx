@@ -13,15 +13,12 @@ query {
 function Introduction(): JSX.Element {
   const intro = useStaticQuery(introQuery).dataJson.introduction as string;
   return (
-    <>
-      <span id="introduction" style={{ paddingTop: '4.5rem' }}></span>
-      <VStack as="section" w="full" spacing={4} align="initial">
-        <h2>Introduction</h2>
-        <Text>
-          {intro}
-        </Text>
-      </VStack>
-    </>
+    <VStack as="section" w="full" spacing={4} align="initial" id="introduction">
+      <h2>Introduction</h2>
+      <Text>
+        {intro}
+      </Text>
+    </VStack>
   );
 }
 

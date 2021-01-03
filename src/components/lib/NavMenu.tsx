@@ -50,7 +50,7 @@ function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
   const animate = isMenuOpen ? 'animate' : 'exit';
 
   return (
-    <AnimatedBox alignItems="center" justifyContent="space-between" w={['full', null, '50%']}
+    <AnimatedBox as="nav" alignItems="center" justifyContent="space-between" w={['full', null, '50%']}
       flexDirection={['column', null, 'row']} fontSize={[null, null, '1.25rem']} d="flex"
       mt={[8, null, 0]} mb={[4, null, 0]} animate={animate} initial="initial" variants={menuVariants} >
       <AnimatedLink href="#skills" onClick={closeMenu} variants={linkVariants} >Skills</AnimatedLink>
