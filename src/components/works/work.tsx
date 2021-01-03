@@ -24,7 +24,7 @@ function Work(props: TWork): JSX.Element {
     <Flex rounded={1} bgColor="lightblack" align="center"
       direction="column" mt={[null, null, '12vw']}>
       <Image src={imgUrl} alt={title} width={['100%', null, '50%']}
-        fit="cover" mt={[null, null, '-12vw']} />
+        fit="cover" mt={[null, null, '-12vw']} p={[3, null, 0]}/>
       <VStack p={3} spacing="0.375rem" align="initial">
         <Text as="span" fontSize="1.125rem">{title}</Text>
         <Text fontStyle="italic" >{summary}</Text>
