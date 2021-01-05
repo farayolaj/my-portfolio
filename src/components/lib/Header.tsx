@@ -55,7 +55,7 @@ function Header({ show }: { show: boolean }): JSX.Element {
   const animate = show ? 'show' : 'hide';
 
   return (
-      <AnimatedBox w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
+      <AnimatedBox as="header" w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
         top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem" d="flex"
         animate={animate} variants={variants} initial="initial">
         <Link opacity={1} href="#">
