@@ -1,10 +1,14 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
 import React from 'react';
+import ExpressSkill from './ExpressSkill';
 import FirebaseSkill from './FirebaseSkill';
+import GitSkill from './GitSkill';
 import GraphQLSkill from './GraphQLSkill';
 import MongoDBSkill from './MongoDBSkill';
+import MySQLSkill from './MySQLSkill';
 import NodeSkill from './NodeSkill';
 import ReactSkill from './ReactSkill';
+import ReduxSkill from './ReduxSkill';
 import TypeScriptSkill from './TypeScriptSkill';
 
 function Skills(): JSX.Element {
@@ -15,9 +19,13 @@ function Skills(): JSX.Element {
         <ReactSkill />
         <GraphQLSkill />
         <NodeSkill />
+        <ExpressSkill />
         <MongoDBSkill />
+        <MySQLSkill />
         <TypeScriptSkill />
         <FirebaseSkill />
+        <ReduxSkill />
+        <GitSkill />
       </SimpleGrid>
     </VStack>
   );
