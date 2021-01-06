@@ -1,10 +1,10 @@
 import React from 'react';
 import SkillTemplate from './SkillTemplate';
-import { ReactComponent as TypeScriptSVG } from './svg/typescript.svg';
+import { ReactComponent as GitSVG } from './svg/git.svg';
 
 function GitSkill(): JSX.Element {
   return (
-    <SkillTemplate name="Git" svg={<TypeScriptSVG />} />
+    <SkillTemplate name="Git" svg={<GitSVG />} />
   );
 }
 

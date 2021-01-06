@@ -8,8 +8,8 @@ type SkillTemplateProp = {
 
 function SkillTemplate({ name, svg }: SkillTemplateProp): JSX.Element {
   const size = useBreakpointValue({
-    base: 41,
-    md: 82
+    base: 40,
+    md: 80
   });
 
   return (
@@ -17,7 +17,7 @@ function SkillTemplate({ name, svg }: SkillTemplateProp): JSX.Element {
       {React.cloneElement(svg, {
         height: size,
         width: size,
-        viewBox: '0 0 41 41'
+        viewBox: '0 0 40 40'
       })}
       <span>{name}</span>
     </VStack>
