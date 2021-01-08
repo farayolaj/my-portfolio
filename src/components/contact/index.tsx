@@ -1,7 +1,7 @@
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const introQuery = graphql`
 query {
@@ -34,7 +34,12 @@ function Contact(): JSX.Element {
     <VStack as="section" w="full" spacing={4} align="initial" id="contact">
       <h2>Contact</h2>
       <Box d="flex" flexDirection="column">
-        <Link href={`mailto:${email}`} w="fit-content">{email}</Link>
+        <Link href={`mailto:${email}`} w="fit-content">
+          <HStack align="center">
+            <span>{email}</span>
+            <Icon as={FaEnvelope} ml={2} />
+          </HStack>
+        </Link>
         <Link d="inline-block" w="fit-content" href={github} isExternal>
           <HStack align="center">
             <span>Github</span>
