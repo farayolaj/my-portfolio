@@ -28,7 +28,7 @@ function Resume(): JSX.Element {
             <Icon as={FaEye} ml={2} />
           </HStack>
         </Link>
-        <Link d="inline-block" w="fit-content" href={download}>
+        <Link d="inline-block" w="fit-content" href={download} download >
           <HStack align="center">
             <span>Download</span>
             <Icon as={FaDownload} ml={2} />
