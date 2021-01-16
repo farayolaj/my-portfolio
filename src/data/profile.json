@@ -1,18 +1,22 @@
 {
   "name": "Farayola Joshua",
   "tagLine": "a fullstack web developer",
-  "introduction": "I am a fullstack web developer that loves building scalable systems and products that offer value.",
+  "introduction": [
+    "I am a fullstack web developer and a Computer Science student at the University of Ibadan. I have been fascinated by computers since I was 10, but I never really got to know what is possible with them until later. Now, I know, and want to do wonders with them.",
+    "I am looking for a junior role where I can join others to do wonders while learning from senior developers what works best in what situation.",
+    "I am also interested in cloud technologies and machine learning and I love music, reading and travelling."
+  ],
   "works": [
     {
       "title": "Play Tic Tac Toe",
       "summary": "A tic tac toe game featuring an AI opponent",
       "story": [
-        "This was one of my earliest works. I actually wanted to build a chess engine, but I started with this to understand what it takes to do so. The AI engine uses the MiniMax algorithm to make an optimal choice. It took a while for me to implement the algorithm, but I later understood its concept.",
-        "Another challenge was figuring out a representation for the board state. I settled on using binary digits since bit manipulations made it easy to make changes and improved the performance. To not block the main program, the AI runs on a worker thread. This was my first use of worker threads.",
-        "This work is hosted on Heroku, it is also available as a PWA."
+        "This was one of my earliest works. It took a while to figure out how to implement the AI opponent, but I did it anyway.",
+        "While building this app, I also learnt how to not block the main app with long running operations like the figuring out the AI's move."
       ],
       "skillsUsed": [
-        "React"
+        "React",
+        "Heroku"
       ],
       "link": {
         "code": "https://github.com/farayolaj/tic-tac-toe",
@@ -21,30 +25,31 @@
       "imgUrl": "/images/TicTacToe.png"
     },
     {
-      "title": "Just Another Work 2",
-      "summary": "This is just another work 2",
+      "title": "Thread It",
+      "summary": "A threadable note-taking app",
       "story": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud dico, ea, quae dicat, praeclare inter se cohaerere. Beatus sibi videtur esse moriens. Bonum integritas corporis: misera debilitas. Praeclarae mortes sunt imperatoriae; Ut alios omittam, hunc appello, quem ille unum secutus est. Mihi vero, inquit, placet agi subtilius et, ut ipse dixisti, pressius. Duo Reges: constructio interrete. Ille enim occurrentia nescio quae comminiscebatur; Ille enim occurrentia nescio quae comminiscebatur; Quae animi affectio suum cuique tribuens atque hanc, quam dico. Sed nimis multa. Hunc ipsum Zenonis aiunt esse finem declarantem illud, quod a te dictum est, convenienter naturae vivere. Consequatur summas voluptates non modo parvo, sed per me nihilo, si potest; Quod ea non occurrentia fingunt, vincunt Aristonem; Apparet statim, quae sint officia, quae actiones. Sed quia studebat laudi et dignitati, multum in virtute processerat. Sed residamus, inquit, si placet. In motu et in statu corporis nihil inest, quod animadvertendum esse ipsa natura iudicet? Innumerabilia dici possunt in hanc sententiam, sed non necesse est. Ne in odium veniam, si amicum destitero tueri. Parvi enim primo ortu sic iacent, tamquam omnino sine animo sint. Ad eas enim res ab Epicuro praecepta dantur. Istam voluptatem perpetuam quis potest praestare sapienti? Multa sunt dicta ab antiquis de contemnendis ac despiciendis rebus humanis; Huius, Lyco, oratione locuples, rebus ipsis ielunior. Quia dolori non voluptas contraria est, sed doloris privatio. An eiusdem modi? Sapiens autem semper beatus est et est aliquando in dolore;"
+        "I was partly inspired by twitter's threads when I built this, you can take notes about related topics in a thread. While working on this, I learnt more about state management in a react application. There were also other challenges I faced that required that I research and updated what I know about building react applications."
       ],
       "skillsUsed": [
-        "Node",
+        "React",
         "Firebase",
-        "Typescript"
+        "Typescript",
+        "Netlify"
       ],
       "link": {
-        "code": "#",
-        "live": null
+        "code": "https://github.com/farayolaj/thread-it",
+        "live": "https://thread-it.netlify.app"
       },
       "imgUrl": "/images/ThreadIt.png"
     }
   ],
   "resume": {
-    "download": "#",
-    "view": "#"
+    "download": "/farayola-joshua-portfolio.pdf",
+    "view": "https://docs.google.com/document/d/1ycl4OIvr8SlvPEeWaNI_wS85I17Mn3cWnigO5lYh1Bk/edit?usp=sharing"
   },
   "contact": {
-    "twitter": "#",
-    "linkedin": "#",
+    "twitter": "https://twitter.com/JFarayola",
+    "linkedin": "https://www.linkedin.com/in/joshua-farayola-b26279b8",
     "github": "https://github.com/farayolaj",
     "email": "farayolajoshua@gmail.com"
   }
