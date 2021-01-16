@@ -3,11 +3,15 @@ import React from 'react';
 import CSSSkill from './CSSSkill';
 import ExpressSkill from './ExpressSkill';
 import FirebaseSkill from './FirebaseSkill';
+import GatsbySkill from './GatsbySkill';
 import GitSkill from './GitSkill';
 import GraphQLSkill from './GraphQLSkill';
+import HerokuSkill from './HerokuSkill';
 import HTMLSkill from './HTMLSkill';
 import MongoDBSkill from './MongoDBSkill';
 import MySQLSkill from './MySQLSkill';
+import NetlifySkill from './NetlifySkill';
+import NextSkill from './NextSkill';
 import NodeSkill from './NodeSkill';
 import ReactSkill from './ReactSkill';
 import ReduxSkill from './ReduxSkill';
@@ -21,6 +25,8 @@ function Skills(): JSX.Element {
         <HTMLSkill />
         <CSSSkill />
         <ReactSkill />
+        <GatsbySkill />
+        <NextSkill />
         <GraphQLSkill />
         <NodeSkill />
         <ExpressSkill />
@@ -28,6 +34,8 @@ function Skills(): JSX.Element {
         <MySQLSkill />
         <TypeScriptSkill />
         <FirebaseSkill />
+        <HerokuSkill />
+        <NetlifySkill />
         <ReduxSkill />
         <GitSkill />
       </SimpleGrid>
