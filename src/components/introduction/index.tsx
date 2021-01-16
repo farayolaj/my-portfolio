@@ -11,13 +11,13 @@ query {
 `;
 
 function Introduction(): JSX.Element {
-  const intro = useStaticQuery(introQuery).dataJson.introduction as string;
+  const intro = useStaticQuery(introQuery).dataJson.introduction as string[];
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="introduction">
       <h2>Introduction</h2>
-      <Text>
-        {intro}
-      </Text>
+      <VStack spacing="0.375rem" align="initial">
+        {intro.map(text => <Text>{text}</Text>)}
+      </VStack>
     </VStack>
   );
 }
