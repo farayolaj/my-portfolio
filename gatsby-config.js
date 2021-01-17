@@ -15,7 +15,27 @@ module.exports = {
         path: './src/data/'
       }
     },
-    // 'gatsby-plugin-react-helmet',
-    // 'gatsby-plugin-offline'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Farayola Joshua',
+        short_name: 'Farayola Joshua',
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#2d2e32',
+        display: 'standalone',
+        icon: 'static/images/logo.png',
+        cache_busting_mode: 'none'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        workboxConfig: {
+          globPatterns: ['**/logo*']
+        }
+      }
+    }
   ],
 };
