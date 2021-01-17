@@ -4,7 +4,7 @@
   "introduction": [
     "I am a fullstack web developer and a Computer Science student at the University of Ibadan. I have been fascinated by computers since I was 10, but I never really got to know what is possible with them until later. Now, I know, and want to do wonders with them.",
     "I am looking for a junior role where I can join others to do wonders while learning from senior developers what works best in what situation.",
-    "I am also interested in cloud technologies and machine learning and I love music, reading and travelling."
+    "I am also interested in cloud technologies and machine learning. I am currently learning German, with a special love for music, books and travelling."
   ],
   "works": [
     {
@@ -28,7 +28,7 @@
       "title": "Thread It",
       "summary": "A threadable note-taking app",
       "story": [
-        "I was partly inspired by twitter's threads when I built this, you can take notes about related topics in a thread. While working on this, I learnt more about state management in a react application. There were also other challenges I faced that required that I research and updated what I know about building react applications."
+        "I was partly inspired by twitter's threads when I built this, you can take notes about related topics in a thread. While working on this, I learnt more about state management in a react application. There were also other challenges I faced that required that I research and update what I knew about building react applications."
       ],
       "skillsUsed": [
         "React",
@@ -44,7 +44,7 @@
     }
   ],
   "resume": {
-    "download": "/farayola-joshua-portfolio.pdf",
+    "download": "/documents/farayola-joshua-portfolio.pdf",
     "view": "https://docs.google.com/document/d/1ycl4OIvr8SlvPEeWaNI_wS85I17Mn3cWnigO5lYh1Bk/edit?usp=sharing"
   },
   "contact": {
