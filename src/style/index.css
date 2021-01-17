@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'Futura PT';
-  src: url('../../static/FuturaPTLight.woff') format('woff');
+  src: url('../../static/fonts/FuturaPTLight.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura PT';
-  src: url('../../static/FuturaPTMedium.woff') format('woff');
+  src: url('../../static/fonts/FuturaPTMedium.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
