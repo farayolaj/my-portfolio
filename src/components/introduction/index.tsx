@@ -16,7 +16,7 @@ function Introduction(): JSX.Element {
     <VStack as="section" w="full" spacing={4} align="initial" id="introduction">
       <h2>Introduction</h2>
       <VStack spacing="0.375rem" align="initial">
-        {intro.map(text => <Text>{text}</Text>)}
+        {intro.map(text => <Text key={text}>{text}</Text>)}
       </VStack>
     </VStack>
   );
