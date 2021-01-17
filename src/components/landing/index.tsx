@@ -68,7 +68,7 @@ function LandingPage(): JSX.Element {
         <Text fontSize="24px">Hello, nice to have you here...</Text>
         <Box pos="relative">
           <Box pos="absolute" w="full" h={24}>
-            <Box pos="relative" left="50%" w="fit-content"
+            <Box pos="relative" left="50%" w="fit-content" style={{ width: '-moz-fit-content' }}
               animation={`${nodeAnim} 5s linear infinite alternate`}
             >
               <svg id="node" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@ function LandingPage(): JSX.Element {
                 <path d="M32.5176 37.6549C32.5176 37.5501 32.5593 37.4496 32.6334 37.3754C32.7075 37.3013 32.8081 37.2597 32.9129 37.2597H34.6614C34.7548 37.26 34.8451 37.2933 34.9162 37.3539C34.9874 37.4144 35.0348 37.4982 35.05 37.5904C35.3136 39.3705 36.1041 40.2677 39.6788 40.2677C42.5261 40.2677 43.7396 39.6234 43.7396 38.1121C43.7396 37.2412 43.3958 36.5943 38.9699 36.1608C35.2701 35.7945 32.9827 34.9749 32.9827 32.0182C32.9827 29.2908 35.2819 27.6635 39.1359 27.6635C43.4669 27.6635 45.6106 29.1669 45.8821 32.3924C45.8862 32.4463 45.8793 32.5004 45.8617 32.5515C45.8441 32.6025 45.8162 32.6495 45.7798 32.6893C45.7434 32.7292 45.6992 32.7612 45.6499 32.7833C45.6007 32.8055 45.5474 32.8173 45.4934 32.818H43.7331C43.6447 32.8168 43.5594 32.786 43.4906 32.7306C43.4218 32.6752 43.3736 32.5984 43.3536 32.5123C42.9333 30.64 41.9042 30.0418 39.1373 30.0418C36.0277 30.0418 35.6667 31.1249 35.6667 31.9365C35.6667 32.9195 36.0936 33.2067 40.2915 33.7614C44.4459 34.3109 46.4197 35.0882 46.4197 38.0081C46.4197 40.9542 43.9636 42.6408 39.6801 42.6408C33.7575 42.6487 32.5176 39.9331 32.5176 37.6549Z" fill="#83CD29" />
               </svg>
             </Box>
-            <Box pos="relative" left="10%" top="30%" w="fit-content"
+            <Box pos="relative" left="10%" top="30%" w="fit-content" style={{ width: '-moz-fit-content' }}
               animation={`${reactAnim} 10s linear 1.5s infinite alternate`}>
               <svg id="graphql" width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="25" cy="25" r="25" fill="#25262A" />
@@ -101,7 +101,7 @@ function LandingPage(): JSX.Element {
             <Box pos="relative" left="72%" top={{
               base: '50%',
               md: '15%'
-            }} w="fit-content"
+            }} w="fit-content" style={{ width: '-moz-fit-content' }}
               animation={`${graphqlAnim} 10s linear 3s infinite alternate`}>
               <svg id="react" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="30" cy="30" r="30" fill="#25262A" />
