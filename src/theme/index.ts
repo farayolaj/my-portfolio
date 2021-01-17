@@ -39,6 +39,7 @@ export default extendTheme({
   styles: {
     global: {
       html: {
+        // scrollBehavior: 'smooth',
         fontSize: 'clamp(1rem, 18px, 3vw)'
       },
       body: {
