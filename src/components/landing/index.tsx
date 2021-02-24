@@ -165,7 +165,7 @@ function LandingPage(): JSX.Element {
           </Link>
         </VStack>
       </Flex>
-      {//<Header show={shouldShowHeader} />}
+      {/* <Header show={shouldShowHeader} /> */}
     </>
   );
 }
