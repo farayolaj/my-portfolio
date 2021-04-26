@@ -41,6 +41,23 @@
         "live": "https://thread-it.netlify.app"
       },
       "imgUrl": "/images/ThreadIt.png"
+    },
+    {
+      "title": "Paystack GraphQL Server",
+      "summary": "A GraphQL proxy for Paystack's API",
+      "story": [
+        "Paystack has a nice REST API, how will it look in GraphQL?",
+        "This is still in the works."
+      ],
+      "skillsUsed": [
+        "GraphQL",
+        "Typescript",
+        "Node"
+      ],
+      "link": {
+        "code": "https://github.com/farayolaj/paystack-gql-server"
+      },
+      "imgUrl": "/images/paystack-gql-server.png"
     }
   ],
   "resume": {
