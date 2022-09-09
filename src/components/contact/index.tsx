@@ -4,42 +4,39 @@ import React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const introQuery = graphql`
-query {
-  dataJson {
-    contact {
-      email
-      github
-      linkedin
-      twitter
+  query {
+    dataJson {
+      contact {
+        email
+        github
+        linkedin
+        twitter
+      }
     }
   }
-}
 `;
 
 type TContact = {
-  email: string,
-  github: string,
-  linkedin: string,
-  twitter: string
-}
+  email: string;
+  github: string;
+  linkedin: string;
+  twitter: string;
+};
 
 function Contact(): JSX.Element {
-  const {
-    email,
-    github,
-    linkedin,
-    twitter
-  } = useStaticQuery(introQuery).dataJson.contact as TContact;
+  const { email, github, linkedin, twitter } = useStaticQuery(introQuery)
+    .dataJson.contact as TContact;
   return (
-    <VStack as="section" w="full" spacing={4} align="initial" id="contact">
+    <VStack
+      as="section"
+      w="full"
+      position="relative"
+      spacing={4}
+      align="initial"
+      id="contact"
+    >
       <h2>Contact</h2>
       <Box d="flex" flexDirection="column">
-        <Link href={`mailto:${email}`} w="fit-content">
-          <HStack align="center">
-            <span>{email}</span>
-            <Icon as={FaEnvelope} ml={2} />
-          </HStack>
-        </Link>
         <Link d="inline-block" w="fit-content" href={github} isExternal>
           <HStack align="center">
             <span>Github</span>
@@ -56,6 +53,12 @@ function Contact(): JSX.Element {
           <HStack align="center">
             <span>Twitter</span>
             <Icon as={FaTwitter} ml={2} />
+          </HStack>
+        </Link>
+        <Link href={`mailto:${email}`} w="fit-content">
+          <HStack align="center">
+            <span>{email}</span>
+            <Icon as={FaEnvelope} ml={2} />
           </HStack>
         </Link>
       </Box>

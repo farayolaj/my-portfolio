@@ -8,41 +8,41 @@ import AnimatedBox from './AnimatedBox';
 import { Variants } from 'framer-motion';
 
 const query = graphql`
-query {
-  dataJson {
-    name
+  query {
+    dataJson {
+      name
+    }
   }
-}
 `;
 
 const variants: Variants = {
   initial: {
     top: '-4rem',
-    display: 'none'
+    display: 'none',
   },
   show: {
     top: 0,
     display: 'flex',
     transition: {
-      when: 'beforeChildren'
-    }
+      when: 'beforeChildren',
+    },
   },
   hide: {
     top: '-4rem',
     transition: {
-      when: 'afterChildren'
+      when: 'afterChildren',
     },
     transitionEnd: {
-      display: 'none'
-    }
-  }
-}
+      display: 'none',
+    },
+  },
+};
 
 function Header({ show }: { show: boolean }): JSX.Element {
   const name = useStaticQuery(query).dataJson.name as string;
   const isMobile = useBreakpointValue({
     base: true,
-    md: false
+    md: false,
   });
   const [isMenuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
@@ -51,29 +51,48 @@ function Header({ show }: { show: boolean }): JSX.Element {
   }, [isMobile]);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const closeMenu: EventHandler<React.MouseEvent<'a'>> = (ev) => {
-    setMenuOpen(false);
-    console.log('Closing');
-    console.log(ev.nativeEvent);
-  }
+  const closeMenu = () => setMenuOpen(false);
   const animate = show ? 'show' : 'hide';
 
   return (
-    <AnimatedBox as="header" w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
-      top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem" d="flex"
-      animate={animate} variants={variants} initial="initial">
+    <AnimatedBox
+      as="header"
+      w="full"
+      bgColor="lightblack"
+      pos="fixed"
+      py={4}
+      zIndex={1}
+      flexWrap="wrap"
+      top={0}
+      px={[8, null, 32]}
+      justifyContent="space-between"
+      fontSize="1.65rem"
+      d="flex"
+      animate={animate}
+      variants={variants}
+      initial="initial"
+    >
       <Link opacity={1} href="#">
         <Text
           fontSize="1em"
           lineHeight="1.2"
           textAlign="center"
-          fontWeight="bold">
+          fontWeight="bold"
+        >
           {name}
         </Text>
       </Link>
-      {isMobile &&
-        <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
-      <NavMenu isMenuOpen={isMobile ? isMenuOpen : show} closeMenu={closeMenu} />
+      {isMobile && (
+        <MenuButton
+          onClick={toggleMenu}
+          ariaLabel="Open and close menu"
+          isMenuOpen={isMenuOpen}
+        />
+      )}
+      <NavMenu
+        isMenuOpen={isMobile ? isMenuOpen : show}
+        closeMenu={closeMenu}
+      />
     </AnimatedBox>
   );
 }

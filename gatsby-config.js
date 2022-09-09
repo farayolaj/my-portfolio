@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/data/'
-      }
+        path: './src/data/',
+      },
     },
     'gatsby-plugin-react-helmet',
     {
@@ -26,16 +26,16 @@ module.exports = {
         theme_color: '#2d2e32',
         display: 'standalone',
         icon: 'static/images/logo.png',
-        cache_busting_mode: 'none'
-      }
+        cache_busting_mode: 'none',
+      },
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['**/logo*']
-        }
-      }
-    }
+          globPatterns: ['**/logo*'],
+        },
+      },
+    },
   ],
 };
