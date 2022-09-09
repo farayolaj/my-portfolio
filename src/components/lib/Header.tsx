@@ -1,6 +1,6 @@
 import React, { EventHandler, FC, useEffect, useState } from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
@@ -72,7 +72,7 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
       variants={variants}
       initial="initial"
     >
-      <Link opacity={1} href="#">
+      <Box as={Link} opacity={1} to="/">
         <Text
           fontSize="1em"
           lineHeight="1.2"
@@ -81,7 +81,7 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
         >
           {name}
         </Text>
-      </Link>
+      </Box>
       {isMobile && (
         <MenuButton
           onClick={toggleMenu}
