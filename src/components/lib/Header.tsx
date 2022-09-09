@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { EventHandler, useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
 
@@ -51,26 +51,30 @@ function Header({ show }: { show: boolean }): JSX.Element {
   }, [isMobile]);
 
   const toggleMenu = () => setMenuOpen(prev => !prev);
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu: EventHandler<React.MouseEvent<'a'>> = (ev) => {
+    setMenuOpen(false);
+    console.log('Closing');
+    console.log(ev.nativeEvent);
+  }
   const animate = show ? 'show' : 'hide';
 
   return (
-      <AnimatedBox as="header" w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
-        top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem" d="flex"
-        animate={animate} variants={variants} initial="initial">
-        <Link opacity={1} href="#">
-          <Text
-            fontSize="1em"
-            lineHeight="1.2"
-            textAlign="center"
-            fontWeight="bold">
-            {name}
-          </Text>
-        </Link>
-        {isMobile &&
-          <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
-        <NavMenu isMenuOpen={isMobile ? isMenuOpen : show} closeMenu={closeMenu} />
-      </AnimatedBox>
+    <AnimatedBox as="header" w="full" bgColor="lightblack" pos="fixed" py={4} zIndex={1} flexWrap="wrap"
+      top={0} px={[8, null, 32]} justifyContent="space-between" fontSize="1.65rem" d="flex"
+      animate={animate} variants={variants} initial="initial">
+      <Link opacity={1} href="#">
+        <Text
+          fontSize="1em"
+          lineHeight="1.2"
+          textAlign="center"
+          fontWeight="bold">
+          {name}
+        </Text>
+      </Link>
+      {isMobile &&
+        <MenuButton onClick={toggleMenu} ariaLabel="Open and close menu" isMenuOpen={isMenuOpen} />}
+      <NavMenu isMenuOpen={isMobile ? isMenuOpen : show} closeMenu={closeMenu} />
+    </AnimatedBox>
   );
 }
 

@@ -43,7 +43,7 @@ const linkVariants: Variants = {
 
 type NavMenuProps = {
   isMenuOpen: boolean;
-  closeMenu: () => void;
+  closeMenu: React.EventHandler<React.MouseEvent<'a'>>;
 };
 
 function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
