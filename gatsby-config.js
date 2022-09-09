@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Farayola Joshua',
+        name: "Farayola Joshua's Portfolio",
         short_name: 'Farayola Joshua',
         start_url: '/',
         background_color: '#ffffff',
@@ -33,7 +33,7 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['**/logo*'],
+          globPatterns: ['**/icons/*'],
         },
       },
     },
