@@ -3,6 +3,7 @@ import AnimatedLink from './AnimatedLink';
 import React from 'react';
 // import { Flex, Link } from '@chakra-ui/react';
 import { Variants } from 'framer-motion';
+import { Link } from '@chakra-ui/react';
 
 const menuVariants: Variants = {
   initial: {
@@ -64,16 +65,16 @@ function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
       initial="initial"
       variants={menuVariants}
     >
-      <AnimatedLink href="#skills" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink to="#skills" onClick={closeMenu} variants={linkVariants}>
         Skills
       </AnimatedLink>
-      <AnimatedLink href="#works" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink to="#works" onClick={closeMenu} variants={linkVariants}>
         Works
       </AnimatedLink>
-      <AnimatedLink href="#resume" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink to="#resume" onClick={closeMenu} variants={linkVariants}>
         Resume
       </AnimatedLink>
-      <AnimatedLink href="#contact" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink to="#contact" onClick={closeMenu} variants={linkVariants}>
         Contact
       </AnimatedLink>
     </AnimatedBox>

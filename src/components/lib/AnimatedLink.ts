@@ -1,4 +1,4 @@
 import { motion } from 'framer-motion';
-import { Link } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 
 export default motion(Link);
