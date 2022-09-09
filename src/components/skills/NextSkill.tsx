@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
 import { ReactComponent as NextSVG } from './svg/next.svg';
 
-function NextSkill(): JSX.Element {
-  return (
-    <SkillTemplate name="Next.js" svg={<NextSVG />} />
-  );
-}
+const NextSkill: FC = () => {
+  return <SkillTemplate name="Next.js" svg={<NextSVG />} />;
+};
 
 export default NextSkill;

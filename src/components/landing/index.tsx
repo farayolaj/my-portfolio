@@ -9,7 +9,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React, { useEffect, useRef } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Header from '../lib/Header';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -39,7 +39,7 @@ type TLandingData = {
   };
 };
 
-function LandingPage(): JSX.Element {
+const LandingPage: FC = () => {
   const {
     name,
     tagLine,
@@ -294,6 +294,6 @@ function LandingPage(): JSX.Element {
       <Header show={shouldShowHeader} />
     </>
   );
-}
+};
 
 export default LandingPage;

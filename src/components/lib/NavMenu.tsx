@@ -1,6 +1,6 @@
 import AnimatedBox from './AnimatedBox';
 import AnimatedLink from './AnimatedLink';
-import React from 'react';
+import React, { FC } from 'react';
 // import { Flex, Link } from '@chakra-ui/react';
 import { Variants } from 'framer-motion';
 import { Link } from '@chakra-ui/react';
@@ -47,7 +47,7 @@ type NavMenuProps = {
   closeMenu: () => void;
 };
 
-function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
+const NavMenu: FC<NavMenuProps> = ({ isMenuOpen, closeMenu }) => {
   const animate = isMenuOpen ? 'animate' : 'exit';
 
   return (
@@ -79,6 +79,6 @@ function NavMenu({ isMenuOpen, closeMenu }: NavMenuProps): JSX.Element {
       </AnimatedLink>
     </AnimatedBox>
   );
-}
+};
 
 export default NavMenu;

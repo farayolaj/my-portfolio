@@ -10,6 +10,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import React from 'react';
+import { FC } from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
 export type TWork = {
@@ -24,7 +25,7 @@ export type TWork = {
   imgUrl: string;
 };
 
-function Work(props: TWork): JSX.Element {
+const Work: FC<TWork> = props => {
   const { title, summary, story, skillsUsed, link, imgUrl } = props;
 
   return (
@@ -68,15 +69,12 @@ function Work(props: TWork): JSX.Element {
       </VStack>
     </Flex>
   );
-}
+};
 
-function WorkLinks({
-  liveUrl,
-  codeUrl,
-}: {
+const WorkLinks: FC<{
   liveUrl?: string;
   codeUrl?: string;
-}): JSX.Element {
+}> = ({ liveUrl, codeUrl }) => {
   if (!liveUrl && !codeUrl) return null;
   return (
     <HStack
@@ -112,6 +110,6 @@ function WorkLinks({
       )}
     </HStack>
   );
-}
+};
 
 export default Work;

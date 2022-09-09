@@ -1,6 +1,6 @@
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
 import { useStaticQuery, graphql } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const introQuery = graphql`
@@ -23,7 +23,7 @@ type TContact = {
   twitter: string;
 };
 
-function Contact(): JSX.Element {
+const Contact: FC = () => {
   const { email, github, linkedin, twitter } = useStaticQuery(introQuery)
     .dataJson.contact as TContact;
   return (
@@ -64,6 +64,6 @@ function Contact(): JSX.Element {
       </Box>
     </VStack>
   );
-}
+};
 
 export default Contact;

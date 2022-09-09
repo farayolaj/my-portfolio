@@ -1,4 +1,4 @@
-import React, { EventHandler, useEffect, useState } from 'react';
+import React, { EventHandler, FC, useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Link, Text, useBreakpointValue } from '@chakra-ui/react';
 
@@ -38,7 +38,7 @@ const variants: Variants = {
   },
 };
 
-function Header({ show }: { show: boolean }): JSX.Element {
+const Header: FC<{ show: boolean }> = ({ show }) => {
   const name = useStaticQuery(query).dataJson.name as string;
   const isMobile = useBreakpointValue({
     base: true,
@@ -95,6 +95,6 @@ function Header({ show }: { show: boolean }): JSX.Element {
       />
     </AnimatedBox>
   );
-}
+};
 
 export default Header;

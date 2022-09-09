@@ -1,34 +1,47 @@
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
 import { useStaticQuery, graphql } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import { FaDownload, FaEye } from 'react-icons/fa';
 
 const resumeQuery = graphql`
-query {
-  dataJson {
-    resume {
-      download
-      view
+  query {
+    dataJson {
+      resume {
+        download
+        view
+      }
     }
   }
-}
 `;
 
-type TResume = { view: string, download: string }
+type TResume = { view: string; download: string };
 
-function Resume(): JSX.Element {
-  const { view, download } = useStaticQuery(resumeQuery).dataJson.resume as TResume;
+const Resume: FC = () => {
+  const { view, download } = useStaticQuery(resumeQuery).dataJson
+    .resume as TResume;
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="resume">
       <h2>Résumé</h2>
       <Box d="flex" flexDirection="column">
-        <Link d="inline-block" w="fit-content" style={{ width: '-moz-fit-content' }} href={view} isExternal>
+        <Link
+          d="inline-block"
+          w="fit-content"
+          style={{ width: '-moz-fit-content' }}
+          href={view}
+          isExternal
+        >
           <HStack align="center">
             <span>View</span>
             <Icon as={FaEye} ml={2} />
           </HStack>
         </Link>
-        <Link d="inline-block" w="fit-content" style={{ width: '-moz-fit-content' }} href={download} download >
+        <Link
+          d="inline-block"
+          w="fit-content"
+          style={{ width: '-moz-fit-content' }}
+          href={download}
+          download
+        >
           <HStack align="center">
             <span>Download</span>
             <Icon as={FaDownload} ml={2} />
@@ -37,6 +50,6 @@ function Resume(): JSX.Element {
       </Box>
     </VStack>
   );
-}
+};
 
 export default Resume;

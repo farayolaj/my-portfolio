@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
 import { ReactComponent as ReactSVG } from './svg/react.svg';
 
-function ReactSkill(): JSX.Element {
-  return (
-    <SkillTemplate name="React.js" svg={<ReactSVG />} />
-  );
-}
+const ReactSkill: FC = () => {
+  return <SkillTemplate name="React.js" svg={<ReactSVG />} />;
+};
 
 export default ReactSkill;

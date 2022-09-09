@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
 import { ReactComponent as GraphQLSVG } from './svg/graphql.svg';
 
-function GraphQLSkill(): JSX.Element {
-  return (
-    <SkillTemplate name="GraphQL" svg={<GraphQLSVG />} />
-  );
-}
+const GraphQLSkill: FC = () => {
+  return <SkillTemplate name="GraphQL" svg={<GraphQLSVG />} />;
+};
 
 export default GraphQLSkill;

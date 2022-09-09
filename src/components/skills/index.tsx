@@ -1,5 +1,5 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
-import React from 'react';
+import React, { FC } from 'react';
 import CSSSkill from './CSSSkill';
 import ExpressSkill from './ExpressSkill';
 import FirebaseSkill from './FirebaseSkill';
@@ -17,7 +17,7 @@ import ReactSkill from './ReactSkill';
 import ReduxSkill from './ReduxSkill';
 import TypeScriptSkill from './TypeScriptSkill';
 
-function Skills(): JSX.Element {
+const Skills: FC = () => {
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="skills">
       <h2>Skills</h2>
@@ -41,6 +41,6 @@ function Skills(): JSX.Element {
       </SimpleGrid>
     </VStack>
   );
-}
+};
 
 export default Skills;
