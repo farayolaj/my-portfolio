@@ -11,25 +11,25 @@ import Works from '../components/works';
 const Home: FC = () => {
   return (
     <>
-      <Helmet title="Farayola Joshua - A Fullstack Web Developer" defer={false}>
+      <Helmet title="Farayola Joshua - Software Engineer" defer={false}>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <title>Farayola Joshua - A Fullstack Web Developer</title>
+        <title>Farayola Joshua - Software Engineer</title>
         <meta
           name="description"
-          content="Fullstack web developer skilled with JavaScript, React, Node, Express"
+          content="Software engineer skilled with Java, JavaScript, React, Node, Express"
         />
         <meta
           name="keyword"
-          content="portfolio, javascript, developer, fullstack, react, node, express"
+          content="portfolio, java, javascript, developer, fullstack, react, node, express"
         />
         <meta
           property="og:title"
-          content="Farayola Joshua - A Fullstack Web Developer"
+          content="Farayola Joshua - Software Engineer"
         />
         <meta
           property="og:description"
-          content="Fullstack web developer skilled with JavaScript, React, Node, Express"
+          content="Software engineer skilled with Java, JavaScript, React, Node, Express"
         />
         <meta
           property="og:image"
@@ -40,11 +40,11 @@ const Home: FC = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Farayola Joshua - A Fullstack Web Developer"
+          content="Farayola Joshua - Software Engineer"
         />
         <meta
           name="twitter:description"
-          content="Fullstack web developer skilled with JavaScript, React, Node, Express"
+          content="Software engineer skilled with Java, JavaScript, React, Node, Express"
         />
         <meta
           name="twitter:image"
