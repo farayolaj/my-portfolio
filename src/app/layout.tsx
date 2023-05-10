@@ -1,10 +1,16 @@
 import { Metadata } from 'next';
-import { PropsWithChildren } from 'react';
+import { Providers } from './providers';
 
-export default function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
@@ -31,23 +37,12 @@ export const metadata: Metadata = {
     'aws',
     'gcp',
   ],
-  appleWebApp: {
-    title: title,
-    startupImage: {
-      url: '/images/logo.png',
-    },
-    capable: true,
-    statusBarStyle: 'black',
-  },
   openGraph: {
     type: 'website',
     title: title,
     url: baseUrl,
     countryName: 'Nigeria',
     description: description,
-    images: {
-      url: '/images/logo.png',
-    },
     emails: 'farayolajoshua@gmail.com',
   },
   applicationName: title,
@@ -67,8 +62,5 @@ export const metadata: Metadata = {
     title: title,
     creator: 'Joshua Farayola',
     description: description,
-    images: {
-      url: '/images/logo.png',
-    },
   },
 };
