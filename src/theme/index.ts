@@ -2,8 +2,8 @@ import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
   fonts: {
-    body: '\'Futura PT\', san-serif',
-    heading: '\'Futura PT\', san-serif'
+    body: "'Futura PT', san-serif",
+    heading: "'Futura PT', san-serif",
   },
   components: {
     Link: {
@@ -11,10 +11,10 @@ export default extendTheme({
         opacity: 0.7,
         _hover: {
           opacity: 1,
-          textDecoration: "none"
-        }
-      }
-    }
+          textDecoration: 'none',
+        },
+      },
+    },
   },
   colors: {
     react: '#00d8ff4d',
@@ -34,35 +34,35 @@ export default extendTheme({
     netlify: '#4300984d',
     next: '#0000004d',
     lightblack: '#2d2e32',
-    darkblack: '#25262a'
+    darkblack: '#25262a',
   },
   styles: {
     global: {
       html: {
         scrollBehavior: 'smooth',
-        fontSize: 'clamp(1rem, 18px, 3vw)'
+        fontSize: 'clamp(1rem, 18px, 3vw)',
       },
       body: {
         color: 'white',
-        bgColor: 'darkblack'
+        bgColor: 'darkblack',
       },
       'h1, h2, h3, h4, h5, h6': {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       },
       h2: {
-        fontSize: 'xl'
+        fontSize: 'xl',
       },
       'p, span': {
         fontSize: 'md',
-        letterSpacing: '0.02em'
+        letterSpacing: '0.02em',
       },
       '::selection': {
         background: 'whiteAlpha.500',
-        color: 'black'
+        color: 'black',
       },
       section: {
-        scrollMarginTop: '4.5rem'
-      }
-    }
-  }
+        scrollMarginTop: '4.5rem',
+      },
+    },
+  },
 });
