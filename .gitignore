@@ -54,10 +54,6 @@ typings/
 # dotenv environment variable files
 .env*
 
-# gatsby files
-.cache/
-public
-
 # Mac files
 .DS_Store
 
@@ -67,17 +63,5 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-static/FuturaPTBold.otf
-static/FuturaPTBold.woff
-static/FuturaPTBoldOblique.woff
-static/FuturaPTBook.otf
-static/FuturaPTBookOblique.woff
-static/FuturaPTCondBold.woff
-static/FuturaPTCondBookOblique.woff
-static/FuturaPTCondMedium.woff
-static/FuturaPTDemi.woff
-static/FuturaPTDemiOblique.woff
-static/FuturaPTExtraBold.woff
-static/FuturaPTHeavy.woff
-static/FuturaPTLightOblique.woff
-static/FuturaPTMediumOblique.woff
+
+.next/
