@@ -18,16 +18,17 @@
     "@types/node": "^20.1.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
-    "fontsource-nunito-sans": "^3.0.9",
     "framer-motion": "^10.0.1",
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "sharp": "^0.32.1",
     "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^2.3.0",
+    "@svgr/webpack": "^8.0.1",
     "eslint": "^8.40.0",
     "eslint-config-next": "^13.4.1",
     "eslint-config-prettier": "^8.8.0",

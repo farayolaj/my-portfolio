@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
-import { ReactComponent as ReactSVG } from './svg/react.svg';
+import ReactSVG from './svg/react.svg';
 
 const ReactSkill: FC = () => {
   return <SkillTemplate name="React.js" svg={<ReactSVG />} />;

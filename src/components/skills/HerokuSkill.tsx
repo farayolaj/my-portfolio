@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
-import { ReactComponent as HerokuSVG } from './svg/heroku.svg';
+import HerokuSVG from './svg/heroku.svg';
 
 const HerokuSkill: FC = () => {
   return <SkillTemplate name="Heroku" svg={<HerokuSVG />} />;

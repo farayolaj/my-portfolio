@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
-import { ReactComponent as NetlifySVG } from './svg/netlify.svg';
+import NetlifySVG from './svg/netlify.svg';
 
 const NetlifySkill: FC = () => {
   return <SkillTemplate name="Netlify" svg={<NetlifySVG />} />;

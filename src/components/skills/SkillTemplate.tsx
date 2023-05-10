@@ -6,7 +6,7 @@ type SkillTemplateProp = {
   svg: JSX.Element;
 };
 
-const SkillTemplate: FC<SkillTemplateProp> = ({ name, svg }) => {
+const SkillTemplate: FC<SkillTemplateProp> = ({ name, SVG) => {
   const size = useBreakpointValue({
     base: 40,
     md: 80,
