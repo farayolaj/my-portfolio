@@ -1,28 +1,10 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
-import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
-import Work, { TWork } from './work';
-
-const workQuery = graphql`
-  query {
-    dataJson {
-      works {
-        title
-        summary
-        story
-        skillsUsed
-        link {
-          code
-          live
-        }
-        imgUrl
-      }
-    }
-  }
-`;
+import profile from '@data/profile';
+import Work from './work';
 
 const Works: FC = () => {
-  const data = useStaticQuery(workQuery).dataJson.works as TWork[];
+  const data = profile.works;
 
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="works">

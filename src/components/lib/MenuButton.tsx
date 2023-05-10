@@ -73,7 +73,7 @@ const MenuButton: FC<MenuButtonProps> = ({
       onClick={onClick}
       variant="unstyled"
       fontSize={size}
-      d="inline-flex"
+      display="inline-flex"
     >
       <motion.svg
         width={size}

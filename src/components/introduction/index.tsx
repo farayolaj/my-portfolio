@@ -1,17 +1,10 @@
+import profile from '@data/profile';
 import { Text, VStack } from '@chakra-ui/react';
-import { useStaticQuery, graphql } from 'gatsby';
 import React, { FC } from 'react';
 
-const introQuery = graphql`
-  query {
-    dataJson {
-      introduction
-    }
-  }
-`;
-
 const Introduction: FC = () => {
-  const intro = useStaticQuery(introQuery).dataJson.introduction as string[];
+  const intro = profile.introduction;
+
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="introduction">
       <h2>Introduction</h2>

@@ -1,30 +1,16 @@
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
-import { useStaticQuery, graphql } from 'gatsby';
+import profile from '@data/profile';
 import React, { FC } from 'react';
 import { FaDownload, FaEye } from 'react-icons/fa';
 
-const resumeQuery = graphql`
-  query {
-    dataJson {
-      resume {
-        download
-        view
-      }
-    }
-  }
-`;
-
-type TResume = { view: string; download: string };
-
 const Resume: FC = () => {
-  const { view, download } = useStaticQuery(resumeQuery).dataJson
-    .resume as TResume;
+  const { view, download } = profile.resume;
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="resume">
       <h2>Résumé</h2>
-      <Box d="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column">
         <Link
-          d="inline-block"
+          display="inline-block"
           w="fit-content"
           style={{ width: '-moz-fit-content' }}
           href={view}
@@ -36,7 +22,7 @@ const Resume: FC = () => {
           </HStack>
         </Link>
         <Link
-          d="inline-block"
+          display="inline-block"
           w="fit-content"
           style={{ width: '-moz-fit-content' }}
           href={download}

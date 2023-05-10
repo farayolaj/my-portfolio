@@ -1,19 +1,12 @@
-import React, { EventHandler, FC, useEffect, useState } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import React, { FC, useEffect, useState } from 'react';
 import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
 
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
 import AnimatedBox from './AnimatedBox';
 import { Variants } from 'framer-motion';
-
-const query = graphql`
-  query {
-    dataJson {
-      name
-    }
-  }
-`;
+import profile from '@data/profile';
+import Link from 'next/link';
 
 const variants: Variants = {
   initial: {
@@ -39,7 +32,7 @@ const variants: Variants = {
 };
 
 const Header: FC<{ show: boolean }> = ({ show }) => {
-  const name = useStaticQuery(query).dataJson.name as string;
+  const name = profile.name;
   const isMobile = useBreakpointValue({
     base: true,
     md: false,
@@ -67,12 +60,12 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
       px={[8, null, 32]}
       justifyContent="space-between"
       fontSize="1.65rem"
-      d="flex"
+      display="flex"
       animate={animate}
       variants={variants}
       initial="initial"
     >
-      <Box as={Link} opacity={1} to="/">
+      <Box as={Link} opacity={1} href="/">
         <Text
           fontSize="1em"
           lineHeight="1.2"

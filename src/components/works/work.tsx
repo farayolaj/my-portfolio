@@ -9,23 +9,12 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+import type profile from '@data/profile';
 import React from 'react';
 import { FC } from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
-export type TWork = {
-  title: string;
-  summary: string;
-  story: string[];
-  skillsUsed: string[];
-  link: {
-    code: string;
-    live: string;
-  };
-  imgUrl: string;
-};
-
-const Work: FC<TWork> = props => {
+const Work: FC<(typeof profile)['works'][0]> = props => {
   const { title, summary, story, skillsUsed, link, imgUrl } = props;
 
   return (

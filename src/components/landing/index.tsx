@@ -12,46 +12,22 @@ import {
 import React, { FC, useEffect, useRef } from 'react';
 import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Header from '../lib/Header';
-import { useStaticQuery, graphql } from 'gatsby';
 import { useIntersect } from '../../hooks';
-
-const landingQuery = graphql`
-  query {
-    dataJson {
-      name
-      tagLine
-      contact {
-        github
-        linkedin
-        twitter
-      }
-    }
-  }
-`;
-
-type TLandingData = {
-  name: string;
-  tagLine: string;
-  contact: {
-    github: string;
-    linkedin: string;
-    twitter: string;
-  };
-};
+import profile from '@data/profile';
 
 const LandingPage: FC = () => {
   const {
     name,
     tagLine,
     contact: { github, linkedin, twitter },
-  } = useStaticQuery(landingQuery).dataJson as TLandingData;
+  } = profile;
 
   const landingRef = useRef<HTMLDivElement>(null);
   const [entry, setNode] = useIntersect({ threshold: 0.1 });
 
   useEffect(() => {
     setNode(landingRef.current);
-  }, []);
+  }, [setNode]);
 
   const shouldShowHeader = !!entry && !entry.isIntersecting;
   const nodeAnim = keyframes`
@@ -254,7 +230,7 @@ const LandingPage: FC = () => {
           >
             <Link href={github} isExternal>
               <IconButton
-                d="inline-flex"
+                display="inline-flex"
                 variant="unstyled"
                 fontSize="2rem"
                 icon={<Icon as={FaGithub} />}
@@ -263,7 +239,7 @@ const LandingPage: FC = () => {
             </Link>
             <Link href={linkedin} isExternal>
               <IconButton
-                d="inline-flex"
+                display="inline-flex"
                 variant="unstyled"
                 fontSize="2rem"
                 icon={<Icon as={FaLinkedin} />}
@@ -272,7 +248,7 @@ const LandingPage: FC = () => {
             </Link>
             <Link href={twitter} isExternal>
               <IconButton
-                d="inline-flex"
+                display="inline-flex"
                 variant="unstyled"
                 fontSize="2rem"
                 icon={<Icon as={FaTwitter} />}
@@ -282,7 +258,7 @@ const LandingPage: FC = () => {
           </Flex>
           <Link href="#introduction">
             <IconButton
-              d="inline-flex"
+              display="inline-flex"
               variant="unstyled"
               fontSize="2rem"
               icon={<Icon as={FaArrowDown} />}

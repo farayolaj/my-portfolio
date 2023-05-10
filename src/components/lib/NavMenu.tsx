@@ -58,23 +58,23 @@ const NavMenu: FC<NavMenuProps> = ({ isMenuOpen, closeMenu }) => {
       w={['full', null, '50%']}
       flexDirection={['column', null, 'row']}
       fontSize={[null, null, '1.25rem']}
-      d="flex"
+      display="flex"
       mt={[8, null, 0]}
       mb={[4, null, 0]}
       animate={animate}
       initial="initial"
       variants={menuVariants}
     >
-      <AnimatedLink to="#skills" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink href="#skills" onClick={closeMenu} variants={linkVariants}>
         Skills
       </AnimatedLink>
-      <AnimatedLink to="#works" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink href="#works" onClick={closeMenu} variants={linkVariants}>
         Works
       </AnimatedLink>
-      <AnimatedLink to="#resume" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink href="#resume" onClick={closeMenu} variants={linkVariants}>
         Resume
       </AnimatedLink>
-      <AnimatedLink to="#contact" onClick={closeMenu} variants={linkVariants}>
+      <AnimatedLink href="#contact" onClick={closeMenu} variants={linkVariants}>
         Contact
       </AnimatedLink>
     </AnimatedBox>
