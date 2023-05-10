@@ -1,12 +1,12 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Box, Text, useBreakpointValue } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
+import { Text, useBreakpointValue } from '@chakra-ui/react';
 
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
 import AnimatedBox from './AnimatedBox';
 import { Variants } from 'framer-motion';
 import profile from '@data/profile';
-import Link from 'next/link';
 
 const variants: Variants = {
   initial: {
@@ -65,7 +65,7 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
       variants={variants}
       initial="initial"
     >
-      <Box as={Link} opacity={1} href="/">
+      <Link opacity={1} href="/">
         <Text
           fontSize="1em"
           lineHeight="1.2"
@@ -74,7 +74,7 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
         >
           {name}
         </Text>
-      </Box>
+      </Link>
       {isMobile && (
         <MenuButton
           onClick={toggleMenu}
