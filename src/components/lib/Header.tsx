@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Link } from '@chakra-ui/next-js';
 import { Text, useBreakpointValue } from '@chakra-ui/react';
 

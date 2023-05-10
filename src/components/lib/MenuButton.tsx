@@ -1,4 +1,4 @@
-import React, { FC, MouseEventHandler } from 'react';
+import { FC, MouseEventHandler } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@chakra-ui/react';
 

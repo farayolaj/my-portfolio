@@ -1,5 +1,5 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import profile from '@data/profile';
 import Work from './work';
 

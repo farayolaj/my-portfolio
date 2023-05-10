@@ -1,6 +1,6 @@
 import profile from '@data/profile';
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Contact: FC = () => {

@@ -4,7 +4,7 @@ import { Box, VStack } from '@chakra-ui/react';
 import Contact from '../components/contact';
 import Introduction from '../components/introduction';
 import LandingPage from '../components/landing';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import Resume from '../components/resume';
 import Skills from '../components/skills';
 import Works from '../components/works';

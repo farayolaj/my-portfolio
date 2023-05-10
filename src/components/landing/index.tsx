@@ -8,7 +8,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import React, { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import Header from '../lib/Header';
 import { useIntersect } from '../../hooks';

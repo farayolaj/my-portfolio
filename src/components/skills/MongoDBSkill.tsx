@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
 import MongoDBSVG from './svg/mongodb.svg';
 

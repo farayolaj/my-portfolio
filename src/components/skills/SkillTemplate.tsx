@@ -1,5 +1,5 @@
 import { VStack, useBreakpointValue } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 type SkillTemplateProp = {
   name: string;

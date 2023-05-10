@@ -1,6 +1,6 @@
 import { Box, HStack, Icon, Link, VStack } from '@chakra-ui/react';
 import profile from '@data/profile';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { FaDownload, FaEye } from 'react-icons/fa';
 
 const Resume: FC = () => {

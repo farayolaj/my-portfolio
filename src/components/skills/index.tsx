@@ -1,5 +1,5 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
-import React, { FC } from 'react';
+import { FC } from 'react';
 import CSSSkill from './CSSSkill';
 import ExpressSkill from './ExpressSkill';
 import FirebaseSkill from './FirebaseSkill';

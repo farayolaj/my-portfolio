@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import SkillTemplate from './SkillTemplate';
 import GitSVG from './svg/git.svg';
 
