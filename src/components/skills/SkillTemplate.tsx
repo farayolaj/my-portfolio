@@ -1,5 +1,5 @@
 import { VStack, useBreakpointValue } from '@chakra-ui/react';
-import { FC } from 'react';
+import { FC, cloneElement } from 'react';
 
 type SkillTemplateProp = {
   name: string;
@@ -14,7 +14,7 @@ const SkillTemplate: FC<SkillTemplateProp> = ({ name, svg }) => {
 
   return (
     <VStack>
-      {React.cloneElement(svg, {
+      {cloneElement(svg, {
         height: size,
         width: size,
         viewBox: '0 0 40 40',
