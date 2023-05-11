@@ -67,6 +67,7 @@ const Header: FC<{ show: boolean }> = ({ show }) => {
     >
       <Link opacity={1} href="/">
         <Text
+          as="h1"
           fontSize="1em"
           lineHeight="1.2"
           textAlign="center"
