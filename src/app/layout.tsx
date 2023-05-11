@@ -17,7 +17,7 @@ export default function RootLayout({
 
 const title = 'Joshua Farayola - Software Engineer';
 const description =
-  'Software engineer skilled with Java, JavaScript, React, Node, Express';
+  'Joshua is a software engineer who is focused on building efficient and maintainable software solutions that provide business value.';
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const metadata: Metadata = {
