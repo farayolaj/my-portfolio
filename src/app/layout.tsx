@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Providers } from './providers';
+import Analytics from '@components/lib/Analytics';
 
 export default function RootLayout({
   children,
@@ -9,6 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Analytics />
         <Providers>{children}</Providers>
       </body>
     </html>
