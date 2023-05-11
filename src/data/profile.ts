@@ -2,9 +2,9 @@ const profile = {
   name: 'Joshua Farayola',
   tagLine: 'a software engineer',
   introduction: [
-    'I am a software engineer and a Computer Science student at the University of Ibadan. I have been fascinated by computers since I was 10, but I never really got to know what is possible with them until later. Now, I know, and want to do wonders with them.',
-    'I am looking for a role where I can join others to do wonders while learning from senior developers what works best in what situation.',
-    'I am also interested in cloud technologies and machine learning. I am currently learning German, with a special love for music, books and travelling.',
+    'I am a software engineer and a Computer Science student at the University of Ibadan. I have been fascinated by computers since I was 10 years old. I remember when I first saw a computer, I was amazed by what it could do. I knew right then and there that I wanted to learn everything I could about computers.',
+    'My focus is on building efficient and maintainable software solutions that provide business value. I am also a very good team player with good communication skills and interpersonal relationship skills.',
+    "I have a lot of interests, the one I'm actively pursuing right now is Data Structures and Algorithms. I am currently learning German, with a special love for music, books, history and travelling.",
   ],
   works: [
     {
