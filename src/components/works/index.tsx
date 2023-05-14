@@ -9,7 +9,7 @@ const Works: FC = () => {
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="works">
       <h2>Works</h2>
-      <SimpleGrid w="full" gap={12} columns={1}>
+      <SimpleGrid w="full" gap={12} columns={[1, null, null, 2]}>
         {data.map(work => (
           <Work {...work} key={work.title} />
         ))}

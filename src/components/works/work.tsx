@@ -19,45 +19,35 @@ const Work: FC<(typeof profile)['works'][0]> = props => {
   const { title, summary, story, skillsUsed, link, imgUrl } = props;
 
   return (
-    <Flex
+    <VStack
+      p={3}
+      spacing="0.375rem"
+      align="initial"
       rounded={1}
       bgColor="lightblack"
-      align="center"
-      direction="column"
-      mt={[null, null, '12vw']}
     >
-      <Image
-        src={imgUrl}
-        alt={title}
-        width={['100%', null, '50%']}
-        fit="cover"
-        mt={[null, null, '-12vw']}
-        p={[3, null, 0]}
-      />
-      <VStack w="full" p={3} spacing="0.375rem" align="initial">
-        <Text as="span" fontSize="1.125rem">
-          {title}
-        </Text>
-        <Text fontStyle="italic">{summary}</Text>
-        <Flex flexWrap="wrap" style={{ gap: '0.25rem' }}>
-          {skillsUsed.map(skill => (
-            <Tag
-              color="white"
-              bgColor={skill.toLowerCase()}
-              minH={0}
-              borderRadius="full"
-              key={skill}
-            >
-              {skill.toLowerCase()}
-            </Tag>
-          ))}
-        </Flex>
-        {story.map(text => (
-          <Text key={text}>{text}</Text>
+      <Text as="span" fontSize="1.125rem">
+        {title}
+      </Text>
+      <Text fontStyle="italic">{summary}</Text>
+      <Flex flexWrap="wrap" style={{ gap: '0.25rem' }}>
+        {skillsUsed.map(skill => (
+          <Tag
+            color="white"
+            bgColor={skill.toLowerCase()}
+            minH={0}
+            borderRadius="full"
+            key={skill}
+          >
+            {skill.toLowerCase()}
+          </Tag>
         ))}
-        <WorkLinks codeUrl={link.code} liveUrl={link.live} />
-      </VStack>
-    </Flex>
+      </Flex>
+      {story.map(text => (
+        <Text key={text}>{text}</Text>
+      ))}
+      <WorkLinks codeUrl={link.code} liveUrl={link.live} />
+    </VStack>
   );
 };
 
