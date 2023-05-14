@@ -1,4 +1,6 @@
-const profile = {
+import type { Profile } from '@types';
+
+const profile: Profile = {
   name: 'Joshua Farayola',
   tagLine: 'a software engineer',
   introduction: [
