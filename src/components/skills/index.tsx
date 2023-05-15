@@ -16,14 +16,27 @@ import NodeSkill from './NodeSkill';
 import ReactSkill from './ReactSkill';
 import ReduxSkill from './ReduxSkill';
 import TypeScriptSkill from './TypeScriptSkill';
+import JavaSkill from './JavaSkill';
+import SpringSkill from './SpringSkill';
+import NestSkill from './NestSkill';
+import DockerSkill from './DockerSkill';
+import KubernetesSkill from './KubernetesSkill';
+import CircleCISkill from './CircleCISkill';
+import PostgreSQLSkill from './PostgreSQLSkill';
 
 const Skills: FC = () => {
   return (
     <VStack as="section" w="full" spacing={4} align="initial" id="skills">
       <h2>Skills</h2>
-      <SimpleGrid templateColumns="1fr 1fr 1fr 1fr" rowGap={6}>
+      <SimpleGrid columns={[3, null, 4]} rowGap={6}>
         <HTMLSkill />
         <CSSSkill />
+        <JavaSkill />
+        <SpringSkill />
+        <NestSkill />
+        <DockerSkill />
+        <KubernetesSkill />
+        <CircleCISkill />
         <ReactSkill />
         <GatsbySkill />
         <NextSkill />
@@ -31,6 +44,7 @@ const Skills: FC = () => {
         <NodeSkill />
         <ExpressSkill />
         <MongoDBSkill />
+        <PostgreSQLSkill />
         <MySQLSkill />
         <TypeScriptSkill />
         <FirebaseSkill />
