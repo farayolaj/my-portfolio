@@ -10,18 +10,50 @@ const profile: Profile = {
   ],
   works: [
     {
-      title: 'Play Tic Tac Toe',
-      summary: 'A tic tac toe game featuring an AI opponent',
+      title: 'Update Playlist',
+      summary:
+        'A CLI app that can help you update the metadata of your music files',
       story: [
-        'This was one of my earliest works. It took a while to figure out how to implement the AI opponent, but I did it anyway.',
-        "While building this app, I also learnt how to not block the main app with long running operations like the figuring out the AI's move.",
+        'I built this after going through a data recovery. Most of the music files from the recovery had the wrong metadata and it was stressful to edit manually. So I thought, why not try to automate this?',
       ],
-      skillsUsed: ['React', 'Heroku'],
+      skillsUsed: ['Java'],
       link: {
-        code: 'https://github.com/farayolaj/tic-tac-toe',
-        live: 'https://tic-tac-toe-20.herokuapp.com',
+        code: 'https://github.com/farayolaj/update-audio-metadata',
       },
-      imgUrl: '/images/TicTacToe.png',
+    },
+    {
+      title: 'Taco Cloud',
+      summary:
+        'A Spring Boot application I built while learning Spring and Spring Boot',
+      story: [
+        'After a lot of confusion about what exactly Spring is, and how it differs from Java EE (now Jakarta EE), I got to understand it and built something on it. The first of many!',
+      ],
+      skillsUsed: ['Java', 'Spring'],
+      link: {
+        code: 'https://github.com/farayolaj/taco-cloud',
+      },
+    },
+    {
+      title: 'Udacity DevOps Microservices',
+      summary: 'My final project for the Udacity DevOps nanodegree',
+      story: [
+        'This is the capstone project for my Udacity DevOps nanodegree sponsored by ALX. I had to build a CI/CD pipeline for a microservice application. I learnt a lot about Docker, Kubernetes and CircleCI while working on this project.',
+      ],
+      skillsUsed: ['Docker', 'Kubernetes', 'CircleCI'],
+      link: {
+        code: 'https://github.com/farayolaj/udacity-devops-microservices',
+      },
+    },
+    {
+      title: 'Discord Chess Bot',
+      summary: 'A Discord bot that organises and manages chess games',
+      story: [
+        'This was a fun project. I like to play chess, so I thought it would be nice to have a bot that can organise and manage chess games. I learnt a lot about building discord bots while working on this.',
+      ],
+      skillsUsed: ['Typescript', 'Node', 'Heroku'],
+      link: {
+        code: 'https://github.com/farayolaj/discord-chess-bot',
+      },
     },
     {
       title: 'Thread It',
@@ -37,17 +69,18 @@ const profile: Profile = {
       imgUrl: '/images/ThreadIt.png',
     },
     {
-      title: 'Paystack GraphQL Server',
-      summary: "A GraphQL proxy for Paystack's API",
+      title: 'Play Tic Tac Toe',
+      summary: 'A tic tac toe game featuring an AI opponent',
       story: [
-        'Paystack has a nice REST API, how will it look in GraphQL?',
-        'This is still in the works.',
+        'This was one of my earliest works. It took a while to figure out how to implement the AI opponent, but I did it anyway.',
+        "While building this app, I also learnt how to not block the main app with long running operations like figuring out the AI's move.",
       ],
-      skillsUsed: ['GraphQL', 'Typescript', 'Node'],
+      skillsUsed: ['React', 'Heroku'],
       link: {
-        code: 'https://github.com/farayolaj/paystack-gql-server',
+        code: 'https://github.com/farayolaj/tic-tac-toe',
+        live: 'https://tic-tac-toe-20.herokuapp.com',
       },
-      imgUrl: '/images/paystack-gql-server.png',
+      imgUrl: '/images/TicTacToe.png',
     },
   ],
   resume: {

@@ -23,7 +23,14 @@ export type Skill =
   | 'Heroku'
   | 'Gatsby'
   | 'Netlify'
-  | 'Next';
+  | 'Next'
+  | 'Java'
+  | 'Spring'
+  | 'Docker'
+  | 'Kubernetes'
+  | 'CircleCI'
+  | 'PostgreSQL'
+  | 'Nest';
 
 export type Work = {
   title: string;
