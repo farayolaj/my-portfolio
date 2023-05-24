@@ -4,6 +4,7 @@ import {
   HStack,
   Image,
   Link,
+  Spacer,
   Tag,
   TagLabel,
   TagRightIcon,
@@ -46,6 +47,7 @@ const Work: FC<(typeof profile)['works'][0]> = props => {
       {story.map(text => (
         <Text key={text}>{text}</Text>
       ))}
+      <Spacer />
       <WorkLinks codeUrl={link.code} liveUrl={link.live} />
     </VStack>
   );
