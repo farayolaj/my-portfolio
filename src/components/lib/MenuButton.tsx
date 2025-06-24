@@ -1,6 +1,6 @@
-import { FC, MouseEventHandler } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { FC, MouseEventHandler } from 'react';
 
 const line1Variant = {
   close: {

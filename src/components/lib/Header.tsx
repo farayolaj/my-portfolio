@@ -1,12 +1,12 @@
-import { FC, useEffect, useState } from 'react';
 import { Link } from '@chakra-ui/next-js';
 import { Text, useBreakpointValue } from '@chakra-ui/react';
+import { FC, useEffect, useState } from 'react';
 
+import profile from '@data/profile';
+import { Variants } from 'framer-motion';
+import AnimatedBox from './AnimatedBox';
 import MenuButton from './MenuButton';
 import NavMenu from './NavMenu';
-import AnimatedBox from './AnimatedBox';
-import { Variants } from 'framer-motion';
-import profile from '@data/profile';
 
 const variants: Variants = {
   initial: {

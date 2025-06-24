@@ -1,5 +1,5 @@
-import profile from '@data/profile';
 import { Text, VStack } from '@chakra-ui/react';
+import profile from '@data/profile';
 import { FC } from 'react';
 
 const Introduction: FC = () => {

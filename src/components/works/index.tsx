@@ -1,6 +1,6 @@
 import { SimpleGrid, VStack } from '@chakra-ui/react';
-import { FC } from 'react';
 import profile from '@data/profile';
+import { FC } from 'react';
 import Work from './work';
 
 const Works: FC = () => {

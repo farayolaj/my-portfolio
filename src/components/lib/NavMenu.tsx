@@ -1,9 +1,8 @@
+import { FC } from 'react';
 import AnimatedBox from './AnimatedBox';
 import AnimatedLink from './AnimatedLink';
-import { FC } from 'react';
 // import { Flex, Link } from '@chakra-ui/react';
 import { Variants } from 'framer-motion';
-import { Link } from '@chakra-ui/react';
 
 const menuVariants: Variants = {
   initial: {

@@ -1,8 +1,6 @@
 import {
-  Box,
   Flex,
   HStack,
-  Image,
   Link,
   Spacer,
   Tag,
@@ -12,7 +10,6 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import type profile from '@data/profile';
-import React from 'react';
 import { FC } from 'react';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
 
