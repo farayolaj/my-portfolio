@@ -64,7 +64,7 @@ const profile: Profile = {
       skillsUsed: ['React', 'Firebase', 'Typescript', 'Netlify'],
       link: {
         code: 'https://github.com/farayolaj/thread-it',
-        live: 'https://thread-it.netlify.app',
+        live: 'https://threadit.farayolaj.ng',
       },
       imgUrl: '/images/ThreadIt.png',
     },
@@ -78,7 +78,7 @@ const profile: Profile = {
       skillsUsed: ['React', 'Heroku'],
       link: {
         code: 'https://github.com/farayolaj/tic-tac-toe',
-        live: 'https://tic-tac-toe-20.herokuapp.com',
+        live: 'https://tictactoe.farayolaj.ng',
       },
       imgUrl: '/images/TicTacToe.png',
     },
