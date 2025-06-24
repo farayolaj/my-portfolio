@@ -85,7 +85,7 @@ const profile: Profile = {
   ],
   resume: {
     download: '/documents/joshua-farayola-resume.pdf',
-    view: 'https://docs.google.com/document/d/1ycl4OIvr8SlvPEeWaNI_wS85I17Mn3cWnigO5lYh1Bk/edit?usp=sharing',
+    view: 'https://1drv.ms/w/c/eb06ed761e2e8cff/ESJ6Cq9cfDpLmKYeGEChiGABSbYZoykbzBUcMsjsVyDWCA?e=u3VIjB',
   },
   contact: {
     twitter: 'https://twitter.com/JFarayola',
