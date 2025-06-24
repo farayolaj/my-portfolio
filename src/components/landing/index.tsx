@@ -1,19 +1,11 @@
-import {
-  Box,
-  Flex,
-  Icon,
-  keyframes,
-  Link,
-  Tag,
-  Text,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Flex, Icon, Link, Tag, Text, VStack } from '@chakra-ui/react';
+import profile from '@data/profile';
 import { FC, useEffect, useRef } from 'react';
 import { FaArrowDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import Header from '../lib/Header';
 import { useIntersect } from '../../hooks';
-import profile from '@data/profile';
+import Header from '../lib/Header';
 
+import { keyframes } from '@emotion/react';
 import GraphQLSvg from './icons/graphql.svg';
 import NodeSvg from './icons/node.svg';
 import ReactSvg from './icons/react.svg';
