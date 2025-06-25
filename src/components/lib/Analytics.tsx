@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Script from 'next/script';
 
 export default function Analytics() {
@@ -6,18 +7,17 @@ export default function Analytics() {
   return (
     <div>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-0MDZSQ818D"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
+        src="https://www.googletagmanager.com/gtag/js?id=G-3RYY6V4M60"
+        onReady={() => {
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag() {
+            dataLayer.push(arguments);
+          }
           gtag('js', new Date());
 
-          gtag('config', 'G-0MDZSQ818D');
-        `}
-      </Script>
+          gtag('config', 'G-3RYY6V4M60');
+        }}
+      />
     </div>
   );
 }
