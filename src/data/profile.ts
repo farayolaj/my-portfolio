@@ -4,9 +4,9 @@ const profile: Profile = {
   name: 'Joshua Farayola',
   tagLine: 'a software engineer',
   introduction: [
-    'I am a software engineer and a Computer Science student at the University of Ibadan. I have been fascinated by computers since I was 10 years old. I remember when I first saw a computer, I was amazed by what it could do. I knew right then and there that I wanted to learn everything I could about computers.',
-    'My focus is on building efficient and maintainable software solutions that provide business value. I am also a very good team player with great communication skills and interpersonal relationship skills.',
-    "I have a lot of interests, the one I'm actively pursuing right now is Data Structures and Algorithms. I am currently learning German, with a special love for music, books, history and travelling.",
+    "I'm a software engineer who builds systems people rely on — payment workflows, authentication servers, learning platforms. At Edutech, I led the migration from Moodle to a custom LMS serving 11,000+ students and staff, built a centralized OIDC/OAuth 2.0 authentication server, and owned the infrastructure that kept core services at 95% uptime.",
+    'I work across the stack — backend APIs in Java, PHP and NestJS, frontends in React and Next.js, and everything in between: Docker, CI/CD, Redis, real-time WebSocket features. I care about reliability as a craft, not a metric. The best infrastructure is the kind nobody notices.',
+    "I graduated First Class in Computer Science from the University of Ibadan. When I'm not shipping, I'm studying German, reading history, or listening to music.",
   ],
   works: [
     {
@@ -85,7 +85,7 @@ const profile: Profile = {
   ],
   resume: {
     download: '/documents/joshua-farayola-resume.pdf',
-    view: 'https://1drv.ms/w/c/eb06ed761e2e8cff/ESJ6Cq9cfDpLmKYeGEChiGABSbYZoykbzBUcMsjsVyDWCA?e=u3VIjB',
+    // view: 'https://1drv.ms/w/c/eb06ed761e2e8cff/ESJ6Cq9cfDpLmKYeGEChiGABSbYZoykbzBUcMsjsVyDWCA?e=u3VIjB',
   },
   contact: {
     twitter: 'https://twitter.com/JFarayola',

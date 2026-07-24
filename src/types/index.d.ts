@@ -46,7 +46,7 @@ export type Work = {
 
 export type Resume = {
   download: string;
-  view: string;
+  view?: string;
 };
 
 export type Contact = {

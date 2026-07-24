@@ -9,18 +9,20 @@ const Resume: FC = () => {
     <VStack as="section" w="full" spacing={4} align="initial" id="resume">
       <h2>Résumé</h2>
       <Box display="flex" flexDirection="column">
-        <Link
-          display="inline-block"
-          w="fit-content"
-          style={{ width: '-moz-fit-content' }}
-          href={view}
-          isExternal
-        >
-          <HStack align="center">
-            <span>View</span>
-            <Icon as={FaEye} ml={2} />
-          </HStack>
-        </Link>
+        {view && (
+          <Link
+            display="inline-block"
+            w="fit-content"
+            style={{ width: '-moz-fit-content' }}
+            href={view}
+            isExternal
+          >
+            <HStack align="center">
+              <span>View</span>
+              <Icon as={FaEye} ml={2} />
+            </HStack>
+          </Link>
+        )}
         <Link
           display="inline-block"
           w="fit-content"
